@@ -1,0 +1,5710 @@
+{
+  "license": [
+    "Copyright (C) 2015-2026 Micah Hoffman",
+    "This work is licensed under the Creative Commons Attribution-ShareAlike",
+    "4.0 International License. To view a copy of this license, visit",
+    "http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to",
+    "Creative Commons, PO Box 1866, Mountain View, CA 94042, USA."
+  ],
+  "authors": [
+    "3xp0rt",
+    "AlexisPradoOficial",
+    "funnyzak",
+    "jschibberges",
+    "mbiesiad",
+    "Micah Hoffman",
+    "mtedholm",
+    "NovaCode37",
+    "Owen Ross"
+  ],
+  "source": "https://github.com/WebBreacher/WhatsMyName/blob/main/wmn-data.json",
+  "modifications": "snitch adaptation: public GET checks only. Signup/availability probes use public profile links where available. Embedded credentials, request bodies and test handles are omitted.",
+  "sites": [
+    {
+      "name": "247sports",
+      "cat": "hobby",
+      "uri_check": "https://247sports.com/User/{account}/",
+      "e_code": 200,
+      "e_string": "staff-header-container",
+      "mode": "marker"
+    },
+    {
+      "name": "35photo",
+      "cat": "hobby",
+      "uri_check": "https://35photo.pro/@{account}/",
+      "e_code": 200,
+      "e_string": "userNameBlock",
+      "mode": "marker"
+    },
+    {
+      "name": "3dtoday",
+      "cat": "hobby",
+      "uri_check": "https://3dtoday.ru/blogs/{account}",
+      "e_code": 200,
+      "e_string": "class=\"header_user_name",
+      "mode": "marker"
+    },
+    {
+      "name": "7cup",
+      "cat": "social",
+      "mode": "disabled"
+    },
+    {
+      "name": "7dach",
+      "cat": "social",
+      "uri_check": "https://7dach.ru/profile/{account}",
+      "e_code": 200,
+      "e_string": "Информация / Профиль",
+      "mode": "marker"
+    },
+    {
+      "name": "about.me",
+      "cat": "social",
+      "uri_check": "https://about.me/{account}",
+      "e_code": 200,
+      "e_string": " | about.me",
+      "mode": "marker"
+    },
+    {
+      "name": "ACF",
+      "cat": "coding",
+      "uri_check": "https://support.advancedcustomfields.com/forums/users/{account}/",
+      "e_code": 200,
+      "e_string": "bbp-user-body",
+      "mode": "marker"
+    },
+    {
+      "name": "AdmireMe.VIP",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://admireme.vip/{account}/",
+      "e_code": 200,
+      "e_string": "creator-stat subscriber",
+      "mode": "marker"
+    },
+    {
+      "name": "adultism",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.adultism.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "Last login:",
+      "mode": "marker"
+    },
+    {
+      "name": "ADVFN",
+      "cat": "finance",
+      "uri_check": "https://uk.advfn.com/forum/profile/{account}",
+      "e_code": 200,
+      "e_string": "Profile | ADVFN",
+      "mode": "marker"
+    },
+    {
+      "name": "alik",
+      "cat": "social",
+      "uri_check": "https://www.alik.cz/u/{account}",
+      "e_code": 200,
+      "e_string": "Vizitka – Alík.cz</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Alura",
+      "cat": "tech",
+      "uri_check": "https://cursos.alura.com.br/user/{account}",
+      "e_code": 200,
+      "e_string": "Perfil de",
+      "mode": "marker"
+    },
+    {
+      "name": "Ameblo",
+      "cat": "blog",
+      "uri_check": "https://ameblo.jp/{account}",
+      "e_code": 200,
+      "e_string": "画像一覧",
+      "mode": "marker"
+    },
+    {
+      "name": "AmericanThinker",
+      "cat": "political",
+      "uri_check": "https://www.americanthinker.com/author/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"author_image\"",
+      "mode": "marker"
+    },
+    {
+      "name": "AniList",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://anilist.co/user/{account}"
+    },
+    {
+      "name": "Anime-Planet",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://www.anime-planet.com/users/{account}"
+    },
+    {
+      "name": "Aparat",
+      "cat": "video",
+      "uri_check": "https://www.aparat.com/api/fa/v1/user/user/information/username/{account}",
+      "uri_pretty": "https://www.aparat.com/{account}",
+      "e_code": 200,
+      "e_string": "\"data\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "Apex Legends",
+      "cat": "gaming",
+      "uri_check": "https://api.tracker.gg/api/v2/apex/standard/profile/origin/{account}",
+      "uri_pretty": "https://apex.tracker.gg/apex/profile/origin/{account}/overview",
+      "e_code": 200,
+      "e_string": "platformInfo",
+      "mode": "marker",
+      "headers": {
+        "Accept-Language": "en-US,en;q=0.5"
+      }
+    },
+    {
+      "name": "appian Community",
+      "cat": "tech",
+      "uri_check": "https://community.appian.com/members/{account}",
+      "e_code": 200,
+      "e_string": "class=\"avatar-container",
+      "mode": "marker"
+    },
+    {
+      "name": "Arch Linux GitLab",
+      "cat": "social",
+      "uri_check": "https://gitlab.archlinux.org/api/v4/users?username={account}",
+      "uri_pretty": "https://gitlab.archlinux.org/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Arduino (Forum)",
+      "cat": "tech",
+      "uri_check": "https://forum.arduino.cc/u/{account}.json",
+      "uri_pretty": "https://forum.arduino.cc/u/{account}/summary",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Arduino (Project Hub)",
+      "cat": "tech",
+      "uri_check": "https://projecthub.arduino.cc/{account}",
+      "e_code": 200,
+      "e_string": "\"userInfo\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "ArmorGames",
+      "cat": "gaming",
+      "uri_check": "https://armorgames.com/user/{account}",
+      "e_code": 200,
+      "e_string": "about",
+      "mode": "marker"
+    },
+    {
+      "name": "Arsmate",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://arsmate.com/api/creators/{account}",
+      "uri_pretty": "https://arsmate.com/{account}",
+      "e_code": 200,
+      "e_string": "\"success\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "Artbreeder",
+      "cat": "art",
+      "uri_check": "https://www.artbreeder.com/{account}",
+      "e_code": 200,
+      "e_string": "data-tutorial=\"profile-filter\"",
+      "mode": "marker"
+    },
+    {
+      "name": "ArtStation",
+      "cat": "art",
+      "uri_check": "https://www.artstation.com/api/v2/user_profiles/{account}.json",
+      "uri_pretty": "https://www.artstation.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "asciinema",
+      "cat": "coding",
+      "uri_check": "https://asciinema.org/~{account}",
+      "e_code": 200,
+      "e_string": "class=\"profile-page\"",
+      "mode": "marker"
+    },
+    {
+      "name": "AtCoder",
+      "cat": "coding",
+      "uri_check": "https://atcoder.jp/users/{account}",
+      "e_code": 200,
+      "e_string": "<h3>Contest Status</h3>",
+      "mode": "marker"
+    },
+    {
+      "name": "au.ru",
+      "cat": "misc",
+      "uri_check": "https://au.ru/user/{account}/",
+      "e_code": 200,
+      "e_string": "Лоты пользователя ",
+      "mode": "marker"
+    },
+    {
+      "name": "Audiojungle",
+      "cat": "music",
+      "uri_check": "https://audiojungle.net/user/{account}",
+      "e_code": 200,
+      "e_string": "s profile on AudioJungle",
+      "mode": "marker"
+    },
+    {
+      "name": "Avid Community",
+      "cat": "music",
+      "uri_check": "https://community.avid.com/members/{account}/default.aspx",
+      "e_code": 200,
+      "e_string": "My Activity",
+      "mode": "marker",
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8"
+      }
+    },
+    {
+      "name": "babepedia",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.babepedia.com/user/{account}",
+      "e_code": 200,
+      "e_string": "'s Profile</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "BabyPips",
+      "cat": "social",
+      "uri_check": "https://forums.babypips.com/u/{account}.json",
+      "uri_pretty": "https://forums.babypips.com/u/{account}/summary",
+      "e_code": 200,
+      "e_string": "user_badges",
+      "mode": "marker"
+    },
+    {
+      "name": "Bandcamp",
+      "cat": "music",
+      "uri_check": "https://bandcamp.com/{account}",
+      "e_code": 200,
+      "e_string": " collection | Bandcamp</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Bandlab",
+      "cat": "music",
+      "uri_check": "https://www.bandlab.com/api/v1.3/users/{account}",
+      "uri_pretty": "https://www.bandlab.com/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "bblog_ru",
+      "cat": "misc",
+      "uri_check": "https://www.babyblog.ru/user/{account}",
+      "e_code": 200,
+      "e_string": ") — дневник на Babyblog.ru",
+      "mode": "marker"
+    },
+    {
+      "name": "BDSMLR",
+      "cat": "xx NSFW xx",
+      "mode": "profile",
+      "uri_check": "https://bdsmlr.com/blog/{account}"
+    },
+    {
+      "name": "bdsmsingles",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.bdsmsingles.com/members/{account}/",
+      "e_code": 200,
+      "e_string": "<title>Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "Beacons",
+      "cat": "social",
+      "uri_check": "https://beacons.ai/{account}",
+      "e_code": 200,
+      "e_string": " - Link in Bio &amp; Creator Tools | Beacons</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Behance",
+      "cat": "business",
+      "uri_check": "https://www.behance.net/{account}",
+      "e_code": 200,
+      "e_string": "\"entityOwners\":[{\"username",
+      "mode": "marker"
+    },
+    {
+      "name": "Bentbox",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://bentbox.co/{account}",
+      "e_code": 200,
+      "e_string": "<div id=\"user_bar\">",
+      "mode": "marker"
+    },
+    {
+      "name": "BiggerPockets",
+      "cat": "finance",
+      "uri_check": "https://www.biggerpockets.com/users/{account}",
+      "e_code": 200,
+      "e_string": "| BiggerPockets</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "BIGO Live",
+      "cat": "gaming",
+      "uri_check": "https://www.bigo.tv/user/{account}",
+      "e_code": 200,
+      "e_string": "userInfo:{nickName",
+      "mode": "marker"
+    },
+    {
+      "name": "Bimpos",
+      "cat": "tech",
+      "uri_check": "https://ask.bimpos.com/user/{account}",
+      "e_code": 200,
+      "e_string": "<title>User ",
+      "mode": "marker"
+    },
+    {
+      "name": "Bio Site",
+      "cat": "social",
+      "uri_check": "https://bio.site/{account}",
+      "e_code": 200,
+      "e_string": "— Bio Sites</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "biolink",
+      "cat": "misc",
+      "uri_check": "https://bio.link/{account}",
+      "e_code": 200,
+      "e_string": "profile:username",
+      "mode": "marker"
+    },
+    {
+      "name": "Bitbucket",
+      "cat": "coding",
+      "uri_check": "https://bitbucket.org/!api/2.0/repositories/{account}?page=1&pagelen=25&sort=-updated_on&q=&fields=-values.owner%2C-values.workspace",
+      "uri_pretty": "https://bitbucket.org/{account}/workspace/repositories/",
+      "e_code": 200,
+      "e_string": "\"full_name\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Bitchute",
+      "cat": "political",
+      "mode": "profile",
+      "uri_check": "https://www.bitchute.com/channel/{account}/"
+    },
+    {
+      "name": "blogi.pl",
+      "cat": "blog",
+      "uri_check": "https://www.blogi.pl/osoba,{account}.html",
+      "e_code": 200,
+      "e_string": "Informacje ogólne",
+      "mode": "marker"
+    },
+    {
+      "name": "Blogmarks",
+      "cat": "misc",
+      "uri_check": "http://blogmarks.net/user/{account}",
+      "e_code": 200,
+      "e_string": "Public marks from",
+      "mode": "marker"
+    },
+    {
+      "name": "Blogspot",
+      "cat": "blog",
+      "uri_check": "https://{account}.blogspot.com/?hl=en-US",
+      "e_code": 200,
+      "e_string": "_WidgetManager._Init",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Bluesky Domain as User",
+      "cat": "social",
+      "uri_check": "https://bsky.app/profile/{account}",
+      "e_code": 200,
+      "e_string": "on Bluesky</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Bluesky Username",
+      "cat": "social",
+      "uri_check": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={account}.bsky.social",
+      "uri_pretty": "https://bsky.app/profile/{account}.bsky.social",
+      "e_code": 200,
+      "e_string": "\"handle\":\"",
+      "mode": "marker"
+    },
+    {
+      "name": "BoardGameGeek",
+      "cat": "gaming",
+      "mode": "profile",
+      "uri_check": "https://boardgamegeek.com/user/{account}"
+    },
+    {
+      "name": "Bookcrossing",
+      "cat": "hobby",
+      "uri_check": "https://www.bookcrossing.com/mybookshelf/{account}",
+      "e_code": 200,
+      "e_string": "membersbycity/",
+      "mode": "marker"
+    },
+    {
+      "name": "Booknode",
+      "cat": "hobby",
+      "uri_check": "https://booknode.com/profil/{account}",
+      "e_code": 200,
+      "e_string": "<title>Profil de",
+      "mode": "marker"
+    },
+    {
+      "name": "Boosty",
+      "cat": "social",
+      "uri_check": "https://api.boosty.to/v1/blog/{account}",
+      "uri_pretty": "https://boosty.to/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Booth",
+      "cat": "shopping",
+      "uri_check": "https://{account}.booth.pm/",
+      "e_code": 200,
+      "e_string": "- BOOTH</title>",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Brickset",
+      "cat": "hobby",
+      "uri_check": "https://brickset.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "Member since:</dt>",
+      "mode": "marker"
+    },
+    {
+      "name": "Bugcrowd",
+      "cat": "tech",
+      "uri_check": "https://bugcrowd.com/profile-service/v1/profiles/{account}",
+      "uri_pretty": "https://bugcrowd.com/h/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Bunpro",
+      "cat": "social",
+      "uri_check": "https://community.bunpro.jp/u/{account}.json",
+      "e_code": 200,
+      "e_string": "username",
+      "mode": "marker"
+    },
+    {
+      "name": "Buy Me a Coffee",
+      "cat": "finance",
+      "mode": "profile",
+      "uri_check": "https://buymeacoffee.com/{account}"
+    },
+    {
+      "name": "BuzzFeed",
+      "cat": "social",
+      "uri_check": "https://www.buzzfeed.com/{account}",
+      "e_code": 200,
+      "e_string": " on BuzzFeed</title><meta",
+      "mode": "marker"
+    },
+    {
+      "name": "cafecito",
+      "cat": "misc",
+      "uri_check": "https://cafecito.app/{account}",
+      "e_code": 200,
+      "e_string": " | Cafecito</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Calendy",
+      "cat": "misc",
+      "uri_check": "https://calendly.com/api/booking/profiles/{account}",
+      "uri_pretty": "https://calendly.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Cameo",
+      "cat": "shopping",
+      "uri_check": "https://www.cameo.com/api/v2/users/{account}",
+      "uri_pretty": "https://www.cameo.com/{account}",
+      "e_code": 200,
+      "e_string": "\"_id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Carbonmade",
+      "cat": "business",
+      "uri_check": "https://{account}.carbonmade.com/",
+      "e_code": 200,
+      "e_string": "<meta name=\"description\" content=\"",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Career.habr",
+      "cat": "business",
+      "uri_check": "https://career.habr.com/{account}",
+      "e_code": 200,
+      "e_string": "— Хабр Карьера</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "carrd.co",
+      "cat": "business",
+      "uri_check": "https://{account}.carrd.co",
+      "e_code": 200,
+      "e_string": "( Made with Carrd )",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "CastingCallClub",
+      "cat": "business",
+      "uri_check": "https://www.castingcall.club/{account}",
+      "e_code": 200,
+      "e_string": "class=\"text-sm text-gray-500\">Joined",
+      "mode": "marker"
+    },
+    {
+      "name": "cda.pl",
+      "cat": "video",
+      "uri_check": "https://www.cda.pl/{account}",
+      "e_code": 200,
+      "e_string": "Foldery",
+      "mode": "marker"
+    },
+    {
+      "name": "Cent",
+      "cat": "social",
+      "uri_check": "https://beta.cent.co/data/user/profile?userHandles={account}",
+      "uri_pretty": "https://beta.cent.co/{account}/",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "cfx.re",
+      "cat": "gaming",
+      "uri_check": "https://forum.cfx.re/u/{account}.json",
+      "uri_pretty": "https://forum.cfx.re/u/{account}/summary",
+      "e_code": 200,
+      "e_string": "created_at",
+      "mode": "marker"
+    },
+    {
+      "name": "championat",
+      "cat": "news",
+      "uri_check": "https://www.championat.com/user/{account}/",
+      "e_code": 200,
+      "e_string": "Личный профил",
+      "mode": "marker"
+    },
+    {
+      "name": "Chamsko",
+      "cat": "images",
+      "uri_check": "https://www.chamsko.pl/profil/{account}",
+      "e_code": 200,
+      "e_string": "W serwisie od",
+      "mode": "marker"
+    },
+    {
+      "name": "chatango.com",
+      "cat": "social",
+      "uri_check": "https://{account}.chatango.com",
+      "e_code": 200,
+      "e_string": "<title>Chatango!",
+      "mode": "marker"
+    },
+    {
+      "name": "CHEEZburger",
+      "cat": "news",
+      "uri_check": "https://cheezburger.com/Editor/{account}",
+      "e_code": 200,
+      "e_string": "<title>Recent Posts from",
+      "mode": "marker"
+    },
+    {
+      "name": "Chess.com",
+      "cat": "gaming",
+      "uri_check": "https://api.chess.com/pub/player/{account}",
+      "uri_pretty": "https://www.chess.com/member/{account}",
+      "e_code": 200,
+      "e_string": "\"player_id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Chocolatey",
+      "cat": "tech",
+      "uri_check": "https://community.chocolatey.org/profiles/{account}",
+      "e_code": 200,
+      "e_string": "id =\"bioSection\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Choko.Link",
+      "cat": "social",
+      "uri_check": "https://choko.link/{account}",
+      "e_code": 200,
+      "e_string": "--title-font-family: Roboto;",
+      "mode": "marker"
+    },
+    {
+      "name": "Chomikuj.pl",
+      "cat": "misc",
+      "uri_check": "https://chomikuj.pl/{account}/",
+      "e_code": 200,
+      "e_string": "Foldery",
+      "mode": "marker"
+    },
+    {
+      "name": "Chyoa",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://chyoa.com/user/{account}",
+      "e_code": 200,
+      "e_string": "When I'm not reading erotica I like to read",
+      "mode": "marker"
+    },
+    {
+      "name": "Cloudflare",
+      "cat": "tech",
+      "uri_check": "https://community.cloudflare.com/u/{account}/card.json",
+      "uri_pretty": "https://community.cloudflare.com/u/{account}",
+      "e_code": 200,
+      "e_string": "user_avatar",
+      "mode": "marker"
+    },
+    {
+      "name": "Clubhouse",
+      "cat": "social",
+      "uri_check": "https://www.clubhouse.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"user\":",
+      "mode": "marker"
+    },
+    {
+      "name": "cnet",
+      "cat": "news",
+      "uri_check": "https://www.cnet.com/profiles/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"author-header__stat-label\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Coda",
+      "cat": "hobby",
+      "uri_check": "https://coda.io/@{account}/",
+      "e_code": 200,
+      "e_string": "- Coda Profile</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Codeberg",
+      "cat": "coding",
+      "uri_check": "https://codeberg.org/api/v1/users/{account}",
+      "uri_pretty": "https://codeberg.org/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Codecademy",
+      "cat": "coding",
+      "uri_check": "https://www.codecademy.com/profiles/{account}",
+      "e_code": 200,
+      "e_string": "\"type\":\"User\"",
+      "mode": "marker"
+    },
+    {
+      "name": "CodeChef",
+      "cat": "coding",
+      "uri_check": "https://www.codechef.com/users/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user-profile-container\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Codeforces",
+      "cat": "coding",
+      "uri_check": "https://codeforces.com/api/user.info?handles={account}",
+      "uri_pretty": "https://codeforces.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"status\":\"OK\"",
+      "mode": "marker"
+    },
+    {
+      "name": "codementor",
+      "cat": "coding",
+      "uri_check": "https://www.codementor.io/@{account}",
+      "e_code": 200,
+      "e_string": "ABOUT ME",
+      "mode": "marker"
+    },
+    {
+      "name": "CodePen",
+      "cat": "coding",
+      "uri_check": "https://codepen.io/{account}",
+      "e_code": 200,
+      "e_string": "property=\"og:url\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Coderwall",
+      "cat": "coding",
+      "uri_check": "https://coderwall.com/{account}/",
+      "e_code": 200,
+      "e_string": "s profile |",
+      "mode": "marker"
+    },
+    {
+      "name": "CodeSandbox",
+      "cat": "coding",
+      "uri_check": "https://codesandbox.io/api/v1/users/{account}",
+      "uri_pretty": "https://codesandbox.io/u/{account}",
+      "e_code": 200,
+      "e_string": "\"data\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Codewars",
+      "cat": "coding",
+      "uri_check": "https://www.codewars.com/api/v1/users/{account}",
+      "uri_pretty": "https://www.codewars.com/users/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "COLOURlovers",
+      "cat": "hobby",
+      "mode": "profile",
+      "uri_check": "https://www.colourlovers.com/lover/{account}"
+    },
+    {
+      "name": "Commudle",
+      "cat": "tech",
+      "uri_check": "https://json.commudle.com/api/v2/users?username={account}",
+      "uri_pretty": "https://www.commudle.com/users/{account}",
+      "e_code": 200,
+      "e_string": "\"status\":200",
+      "mode": "marker"
+    },
+    {
+      "name": "Community Adobe",
+      "cat": "tech",
+      "uri_check": "https://community.adobe.com/t5/forums/searchpage/tab/user?q={account}",
+      "e_code": 200,
+      "e_string": "UserSearchItemContainer",
+      "mode": "marker"
+    },
+    {
+      "name": "coroflot",
+      "cat": "art",
+      "uri_check": "https://www.coroflot.com/{account}",
+      "e_code": 200,
+      "e_string": "portfolio",
+      "mode": "marker"
+    },
+    {
+      "name": "Coub",
+      "cat": "social",
+      "uri_check": "https://coub.com/api/v2/channels/{account}",
+      "uri_pretty": "https://coub.com/{account}/",
+      "e_code": 200,
+      "e_string": "\"user_id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "cowboys4angels",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://cowboys4angels.com/cowboy/{account}/",
+      "e_code": 200,
+      "e_string": " - Cowboys 4 Angels</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Cracked",
+      "cat": "social",
+      "uri_check": "https://www.cracked.com/members/{account}",
+      "e_code": 200,
+      "e_string": "Member Since",
+      "mode": "marker"
+    },
+    {
+      "name": "crevado",
+      "cat": "images",
+      "uri_check": "https://{account}.crevado.com/",
+      "e_code": 200,
+      "e_string": "Portfolio",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Cropty",
+      "cat": "finance",
+      "uri_check": "https://api.cropty.io/v1/auth/{account}",
+      "uri_pretty": "https://www.cropty.io/@{account}",
+      "e_code": 200,
+      "e_string": "\"name\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Crowdin",
+      "cat": "hobby",
+      "uri_check": "https://crowdin.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "id=\"profile-page\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Cults3D",
+      "cat": "hobby",
+      "uri_check": "https://cults3d.com/en/users/{account}/creations",
+      "e_code": 200,
+      "e_string": "All the 3D models of",
+      "mode": "marker"
+    },
+    {
+      "name": "Cytoid",
+      "cat": "gaming",
+      "uri_check": "https://cytoid.io/profile/{account}",
+      "e_code": 200,
+      "e_string": "Joined",
+      "mode": "marker"
+    },
+    {
+      "name": "Daily Kos",
+      "cat": "news",
+      "uri_check": "https://www.dailykos.com/user/{account}",
+      "e_code": 200,
+      "e_string": "\"@type\":\"ProfilePage\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Dailymotion",
+      "cat": "video",
+      "uri_check": "https://api.dailymotion.com/user/{account}?fields=id,username,screenname,description,avatar_720_url,cover_250_url,followers_total,following_total,videos_total,country,created_time,verified,url",
+      "uri_pretty": "https://www.dailymotion.com/user/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "darudar",
+      "cat": "misc",
+      "uri_check": "https://darudar.org/users/{account}/",
+      "e_code": 200,
+      "e_string": ". Дарудар",
+      "mode": "marker"
+    },
+    {
+      "name": "dateinasia",
+      "cat": "dating",
+      "uri_check": "https://www.dateinasia.com/{account}",
+      "e_code": 200,
+      "e_string": "About me",
+      "mode": "marker"
+    },
+    {
+      "name": "datezone",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://en.datezone.com/users/{account}",
+      "e_code": 200,
+      "e_string": "property=\"og:url\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Dating.ru",
+      "cat": "dating",
+      "uri_check": "https://dating.ru/{account}/",
+      "e_code": 200,
+      "e_string": "| dating.ru",
+      "mode": "marker"
+    },
+    {
+      "name": "Demotywatory",
+      "cat": "images",
+      "uri_check": "https://demotywatory.pl/user/{account}",
+      "e_code": 200,
+      "e_string": "Z nami od:",
+      "mode": "marker"
+    },
+    {
+      "name": "depop",
+      "cat": "shopping",
+      "uri_check": "https://www.depop.com/{account}/",
+      "e_code": 200,
+      "e_string": "{\"name\":\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Designspriation",
+      "cat": "art",
+      "uri_check": "https://www.designspiration.com/{account}/",
+      "e_code": 200,
+      "e_string": "has discovered on Designspiration",
+      "mode": "marker"
+    },
+    {
+      "name": "destream",
+      "cat": "finance",
+      "uri_check": "https://api.destream.net/siteapi/v2/live/details/{account}",
+      "uri_pretty": "https://destream.net/live/{account}",
+      "e_code": 200,
+      "e_string": "\"userName\":",
+      "mode": "marker"
+    },
+    {
+      "name": "dev.to",
+      "cat": "coding",
+      "uri_check": "https://dev.to/api/users/by_username?url={account}",
+      "uri_pretty": "https://dev.to/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "DeviantArt",
+      "cat": "images",
+      "uri_check": "https://www.deviantart.com/{account}",
+      "e_code": 200,
+      "e_string": " on DeviantArt</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "devRant",
+      "cat": "coding",
+      "uri_check": "https://devrant.com/api/get-user-id?app=3&username={account}",
+      "uri_pretty": "https://devrant.com/users/{account}",
+      "e_code": 200,
+      "e_string": "\"success\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "DFG",
+      "cat": "gaming",
+      "uri_check": "https://www.dfg.com.br/user/{account}",
+      "e_code": 200,
+      "e_string": "class=\"container user-information\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Diablo",
+      "cat": "gaming",
+      "uri_check": "https://diablo2.io/member/{account}/",
+      "e_code": 200,
+      "e_string": "Viewing profile - ",
+      "mode": "marker"
+    },
+    {
+      "name": "DIBIZ",
+      "cat": "business",
+      "uri_check": "https://www.dibiz.com/{account}",
+      "e_code": 200,
+      "e_string": "Add to contacts</span>",
+      "mode": "marker"
+    },
+    {
+      "name": "Digitalspy",
+      "cat": "social",
+      "uri_check": "https://forums.digitalspy.com/profile/discussions/{account}",
+      "e_code": 200,
+      "e_string": "About",
+      "mode": "marker"
+    },
+    {
+      "name": "diigo",
+      "cat": "images",
+      "uri_check": "https://www.diigo.com/interact_api/load_profile_info?name={account}",
+      "uri_pretty": "https://www.diigo.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "regist_at",
+      "mode": "marker"
+    },
+    {
+      "name": "Discogs",
+      "cat": "music",
+      "uri_check": "https://api.discogs.com/users/{account}",
+      "uri_pretty": "https://www.discogs.com/user/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Discord (Invite)",
+      "cat": "social",
+      "uri_check": "https://discord.com/api/v9/invites/{account}?with_counts=true&with_expiration=true",
+      "uri_pretty": "https://discord.com/invite/{account}",
+      "e_code": 200,
+      "e_string": "\"channel\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Discord (User)",
+      "cat": "social",
+      "mode": "unavailable"
+    },
+    {
+      "name": "Discourse",
+      "cat": "misc",
+      "uri_check": "https://meta.discourse.org/u/{account}/summary.json",
+      "uri_pretty": "https://meta.discourse.org/u/{account}",
+      "e_code": 200,
+      "e_string": "topics",
+      "mode": "marker"
+    },
+    {
+      "name": "discuss.elastic.co",
+      "cat": "tech",
+      "uri_check": "https://discuss.elastic.co/u/{account}",
+      "e_code": 200,
+      "e_string": "<title>  Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "Disqus",
+      "cat": "social",
+      "uri_check": "https://disqus.com/api/3.0/users/details?user=username:{account}&api_key=E8Uh5l5fHZ6gD8U3KycjAIAk46f68Zw7C6eW8WSjZvCLXebZ7p0r1yrYDrLilk2F",
+      "uri_pretty": "https://disqus.com/by/{account}/",
+      "e_code": 200,
+      "e_string": "\"code\":0",
+      "mode": "marker"
+    },
+    {
+      "name": "Docker Hub (Organization)",
+      "cat": "coding",
+      "uri_check": "https://hub.docker.com/v2/orgs/{account}/",
+      "uri_pretty": "https://hub.docker.com/u/{account}",
+      "e_code": 200,
+      "e_string": "\"uuid\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Docker Hub (User)",
+      "cat": "coding",
+      "uri_check": "https://hub.docker.com/v2/users/{account}/",
+      "uri_pretty": "https://hub.docker.com/u/{account}",
+      "e_code": 200,
+      "e_string": "\"uuid\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Dojoverse",
+      "cat": "hobby",
+      "uri_check": "https://dojoverse.com/members/{account}/",
+      "e_code": 200,
+      "e_string": "Joined",
+      "mode": "marker"
+    },
+    {
+      "name": "donate.stream",
+      "cat": "finance",
+      "uri_check": "https://donate.stream/api/v1/streamer.get?path={account}&app=9f4e793cec820015d511dbc77b20c5c1",
+      "uri_pretty": "https://donate.stream/{account}",
+      "e_code": 200,
+      "e_string": "\"response\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Donatello",
+      "cat": "finance",
+      "uri_check": "https://donatello.to/{account}",
+      "e_code": 200,
+      "e_string": "UserPage.init",
+      "mode": "marker"
+    },
+    {
+      "name": "Donatik",
+      "cat": "finance",
+      "uri_check": "https://{account}.donatik.ua/",
+      "e_code": 200,
+      "e_string": "\\\"__typename\\\":\\\"UserPageOutput\\\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Donation Alerts",
+      "cat": "finance",
+      "uri_check": "https://www.donationalerts.com/api/v1/user/{account}/donationpagesettings",
+      "uri_pretty": "https://www.donationalerts.com/r/{account}",
+      "e_code": 200,
+      "e_string": "\"data\":",
+      "mode": "marker"
+    },
+    {
+      "name": "DonationPay",
+      "cat": "finance",
+      "uri_check": "https://give.donationpay.org/hopewell-fund/{account}/",
+      "e_code": 200,
+      "e_string": "id=\"dp-payment-form\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Donatty",
+      "cat": "business",
+      "uri_check": "https://api.donatty.com/users/find/{account}",
+      "uri_pretty": "https://donatty.com/{account}",
+      "e_code": 200,
+      "e_string": "\"response\":",
+      "mode": "marker"
+    },
+    {
+      "name": "dot.cards",
+      "cat": "business",
+      "uri_check": "https://dot.cards/{account}",
+      "e_code": 200,
+      "e_string": "\"user_id\":\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Dota2.ru",
+      "cat": "gaming",
+      "uri_check": "https://dota2.ru/forum/search/?type=user&keywords={account}&sort_by=username",
+      "e_code": 200,
+      "e_string": "class=\"forum-section__item forum-section__item--first\"",
+      "mode": "marker"
+    },
+    {
+      "name": "DOTAFire",
+      "cat": "gaming",
+      "uri_check": "https://www.dotafire.com/ajax/searchSite?text={account}&search=members",
+      "e_code": 200,
+      "e_string": "href=\"/profile/",
+      "mode": "marker"
+    },
+    {
+      "name": "DOU",
+      "cat": "social",
+      "uri_check": "https://dou.ua/users/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"page-profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Dribbble",
+      "cat": "art",
+      "uri_check": "https://dribbble.com/{account}",
+      "e_code": 200,
+      "e_string": " | Dribbble",
+      "mode": "marker"
+    },
+    {
+      "name": "DRIVE2.RU",
+      "cat": "social",
+      "uri_check": "https://www.drive2.ru/users/{account}/",
+      "e_code": 200,
+      "e_string": "itemprop=\"name\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Droners",
+      "cat": "hobby",
+      "uri_check": "https://droners.io/accounts/{account}/",
+      "e_code": 200,
+      "e_string": "- Professional Drone Pilot",
+      "mode": "marker"
+    },
+    {
+      "name": "Duolingo",
+      "cat": "hobby",
+      "uri_check": "https://www.duolingo.com/2017-06-30/users?username={account}&_=1628308619574",
+      "uri_pretty": "https://www.duolingo.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "joinedClassroomIds",
+      "mode": "marker"
+    },
+    {
+      "name": "easyen",
+      "cat": "social",
+      "uri_check": "https://easyen.ru/index/8-0-{account}",
+      "e_code": 200,
+      "e_string": "День рождения",
+      "mode": "marker"
+    },
+    {
+      "name": "eBay",
+      "cat": "shopping",
+      "uri_check": "https://www.ebay.com/usr/{account}?_tab=about",
+      "e_code": 200,
+      "e_string": "\"text\":\" followers\"",
+      "mode": "marker"
+    },
+    {
+      "name": "ebay_stores",
+      "cat": "shopping",
+      "uri_check": "https://www.ebay.com/str/{account}",
+      "e_code": 200,
+      "e_string": "| eBay Stores</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Electrobel",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://be.electrobel.org/{account}"
+    },
+    {
+      "name": "EPORNER",
+      "cat": "xx NSFW xx",
+      "mode": "profile",
+      "uri_check": "https://www.eporner.com/profile/{account}/"
+    },
+    {
+      "name": "Etoro",
+      "cat": "finance",
+      "uri_check": "https://www.etoro.com/api/logininfo/v1.1/users/{account}",
+      "uri_pretty": "https://www.etoro.com/people/{account}",
+      "e_code": 200,
+      "e_string": "\"gcid\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Etsy",
+      "cat": "shopping",
+      "uri_check": "https://www.etsy.com/people/{account}",
+      "e_code": 200,
+      "e_string": " favorite items - Etsy</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Evolution CMS",
+      "cat": "tech",
+      "uri_check": "https://community.evocms.ru/users/?search={account}",
+      "e_code": 200,
+      "e_string": "id=\"user-search\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Expressional.social (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://expressional.social/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://expressional.social/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Fabswingers",
+      "cat": "dating",
+      "uri_check": "https://www.fabswingers.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "View Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "Facebook",
+      "cat": "social",
+      "uri_check": "https://www.facebook.com/{account}/",
+      "e_code": 200,
+      "e_string": "__isProfile",
+      "mode": "marker"
+    },
+    {
+      "name": "FACEIT",
+      "cat": "gaming",
+      "uri_check": "https://www.faceit.com/api/users/v1/nicknames/{account}",
+      "uri_pretty": "https://www.faceit.com/en/players/{account}",
+      "e_code": 200,
+      "e_string": "\"result\":\"OK\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Faktopedia",
+      "cat": "images",
+      "uri_check": "https://faktopedia.pl/user/{account}",
+      "e_code": 200,
+      "e_string": "Zamieszcza fakty od:",
+      "mode": "marker"
+    },
+    {
+      "name": "FanCentro",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://fancentro.com/api/profile.get?profileAlias={account}&limit=1",
+      "uri_pretty": "https://fancentro.com/{account}/",
+      "e_code": 200,
+      "e_string": "\"status\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "Fandom",
+      "cat": "gaming",
+      "uri_check": "https://www.fandom.com/u/{account}",
+      "e_code": 200,
+      "e_string": "| Profile | Fandom",
+      "mode": "marker"
+    },
+    {
+      "name": "Fanslist (OnlyFans)",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://fanslist.com/search?q={account}",
+      "e_code": 200,
+      "e_string": "data-username=",
+      "mode": "marker"
+    },
+    {
+      "name": "Fansly",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://apiv3.fansly.com/api/v1/account?usernames={account}",
+      "uri_pretty": "https://fansly.com/{account}/posts",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Federated.press (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://federated.press/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://federated.press/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Figma",
+      "cat": "tech",
+      "uri_check": "https://www.figma.com/api/profile/handle/{account}",
+      "uri_pretty": "https://www.figma.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"status\":200",
+      "mode": "marker"
+    },
+    {
+      "name": "Filmot Channel Search",
+      "cat": "archived",
+      "uri_check": "https://filmot.com/channelsearch/{account}",
+      "e_code": 200,
+      "e_string": "Subscribers",
+      "mode": "marker"
+    },
+    {
+      "name": "Filmot Unlisted Videos",
+      "cat": "archived",
+      "uri_check": "https://filmot.com/unlistedSearch?channelQuery={account}&sortField=uploaddate&sortOrder=desc&",
+      "e_code": 200,
+      "e_string": "clips found",
+      "mode": "marker"
+    },
+    {
+      "name": "Filmweb",
+      "cat": "hobby",
+      "uri_check": "https://www.filmweb.pl/api/v1/users/{account}/id",
+      "uri_pretty": "https://www.filmweb.pl/user/{account}",
+      "e_code": 200,
+      "e_string": "\"userId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "fine_art_america",
+      "cat": "shopping",
+      "uri_check": "https://fineartamerica.com/profiles/{account}",
+      "e_code": 200,
+      "e_string": "Shop for artwork by",
+      "mode": "marker"
+    },
+    {
+      "name": "Fiverr",
+      "cat": "shopping",
+      "mode": "profile",
+      "uri_check": "https://www.fiverr.com/{account}"
+    },
+    {
+      "name": "FL.ru",
+      "cat": "social",
+      "uri_check": "https://www.fl.ru/users/{account}/portfolio/",
+      "e_code": 200,
+      "e_string": "class=\"page-profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Flickr",
+      "cat": "images",
+      "uri_check": "https://www.flickr.com/photos/{account}/",
+      "e_code": 200,
+      "e_string": "| Flickr",
+      "mode": "marker"
+    },
+    {
+      "name": "Flightradar24",
+      "cat": "misc",
+      "uri_check": "https://my.flightradar24.com/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"profile-card\" data-profile-user=",
+      "mode": "marker"
+    },
+    {
+      "name": "Flipboard",
+      "cat": "tech",
+      "uri_check": "https://flipboard.com/@{account}",
+      "e_code": 200,
+      "e_string": ") on Flipboard",
+      "mode": "marker"
+    },
+    {
+      "name": "flowcode",
+      "cat": "social",
+      "uri_check": "https://www.flow.page/{account}",
+      "e_code": 200,
+      "e_string": "\"page\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "Fodors Forum",
+      "cat": "social",
+      "uri_check": "https://www.fodors.com/community/profile/{account}/forum-activity",
+      "e_code": 200,
+      "e_string": "User Profile | Fodor’s Travel</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Folkd",
+      "cat": "social",
+      "uri_check": "https://www.folkd.com/?app=core&module=system&controller=ajax&do=usernameExists&input={account}",
+      "uri_pretty": "https://www.folkd.com/search/?q={account}&quick=1&type=core_members",
+      "e_code": 200,
+      "e_string": "\"message\":\"That display name is in use by another member.\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Fortnite Tracker",
+      "cat": "gaming",
+      "uri_check": "https://fortnitetracker.com/profile/all/{account}",
+      "e_code": 200,
+      "e_string": "s Fortnite Stats - Fortnite Tracker",
+      "mode": "marker"
+    },
+    {
+      "name": "Fosstodon.org (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://fosstodon.org/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://fosstodon.org/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "fotka",
+      "cat": "social",
+      "uri_check": "https://api.fotka.com/v2/user/dataStatic?login={account}",
+      "uri_pretty": "https://fotka.com/profil/{account}",
+      "e_code": 200,
+      "e_string": "\"profil\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Fotolog Archived Profile",
+      "cat": "archived",
+      "mode": "marker",
+      "uri_check": "https://archive.org/wayback/available?url=https://www.fotolog.com/{account}",
+      "uri_pretty": "https://web.archive.org/web/2/fotolog.com/{account}",
+      "e_code": 200,
+      "e_string": "\"archived_snapshots\": {\"closest\""
+    },
+    {
+      "name": "Foursquare",
+      "cat": "social",
+      "uri_check": "https://foursquare.com/{account}",
+      "e_code": 200,
+      "e_string": "class=\"userProfile2Page\"",
+      "mode": "marker"
+    },
+    {
+      "name": "freeCodeCamp",
+      "cat": "coding",
+      "uri_check": "https://api.freecodecamp.org/users/get-public-profile?username={account}",
+      "uri_pretty": "https://www.freecodecamp.org/{account}",
+      "e_code": 200,
+      "e_string": "\"user\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Freelance.RU",
+      "cat": "business",
+      "uri_check": "https://freelance.ru/{account}",
+      "e_code": 200,
+      "e_string": "class=\" user-top-container user-portfolio\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Freelance.ua",
+      "cat": "social",
+      "uri_check": "https://freelance.ua/user/{account}/",
+      "e_code": 200,
+      "e_string": "p-profile-avatar",
+      "mode": "marker"
+    },
+    {
+      "name": "Freelancehunt (Employer)",
+      "cat": "social",
+      "uri_check": "https://freelancehunt.com/en/employer/{account}.html",
+      "e_code": 200,
+      "e_string": "\"@id\":\"https://freelancehunt.com/en/employers\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Freelancehunt (Freelancer)",
+      "cat": "social",
+      "uri_check": "https://freelancehunt.com/en/freelancer/{account}.html",
+      "e_code": 200,
+      "e_string": "\"@id\":\"https://freelancehunt.com/en/freelancers\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Freelancer",
+      "cat": "business",
+      "uri_check": "https://www.freelancer.com/api/users/0.1/users?usernames%5B%5D={account}&compact=true",
+      "uri_pretty": "https://www.freelancer.com/u/{account}",
+      "e_code": 200,
+      "e_string": "\"users\":{\"",
+      "mode": "marker"
+    },
+    {
+      "name": "freesound",
+      "cat": "music",
+      "uri_check": "https://freesound.org/people/{account}/section/stats/?ajax=1",
+      "uri_pretty": "https://freesound.org/people/{account}/",
+      "e_code": 200,
+      "e_string": "forum posts",
+      "mode": "marker"
+    },
+    {
+      "name": "FriendFinder",
+      "cat": "dating",
+      "uri_check": "https://friendfinder.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "Last Visit:",
+      "mode": "marker"
+    },
+    {
+      "name": "FriendFinder-X",
+      "cat": "dating",
+      "uri_check": "https://www.friendfinder-x.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "'s Dating Profile on FriendFinder-x",
+      "mode": "marker"
+    },
+    {
+      "name": "Fur Affinity",
+      "cat": "images",
+      "uri_check": "https://www.furaffinity.net/user/{account}/",
+      "e_code": 200,
+      "e_string": "<userpage-nav-header>",
+      "mode": "marker"
+    },
+    {
+      "name": "Gab",
+      "cat": "political",
+      "uri_check": "https://gab.com/api/v1/account_by_username/{account}",
+      "uri_pretty": "https://gab.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Game Jolt",
+      "cat": "gaming",
+      "uri_check": "https://gamejolt.com/site-api/web/profile/@{account}/",
+      "uri_pretty": "https://gamejolt.com/@{account}",
+      "e_code": 200,
+      "e_string": "created_on",
+      "mode": "marker"
+    },
+    {
+      "name": "Gamer DVR",
+      "cat": "gaming",
+      "uri_check": "https://gamerdvr.com/gamer/{account}",
+      "e_code": 200,
+      "e_string": "class=\"gamerpic\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Gamespot",
+      "cat": "gaming",
+      "uri_check": "https://www.gamespot.com/profile/{account}/summary/activity/?ajax",
+      "uri_pretty": "https://www.gamespot.com/profile/{account}/",
+      "e_code": 200,
+      "e_string": "\"success\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "Garmin Connect",
+      "cat": "health",
+      "uri_check": "https://connect.garmin.com/app/profile/{account}",
+      "e_code": 200,
+      "e_string": "window.VIEWER_USERPREFERENCES = {",
+      "mode": "marker"
+    },
+    {
+      "name": "GDBrowser",
+      "cat": "gaming",
+      "uri_check": "https://gdbrowser.com/api/profile/{account}",
+      "uri_pretty": "https://gdbrowser.com/u/{account}",
+      "e_code": 200,
+      "e_string": "\"accountID\":",
+      "mode": "marker"
+    },
+    {
+      "name": "GeeksForGeeks",
+      "cat": "coding",
+      "uri_check": "https://authapi.geeksforgeeks.org/api-get/user-profile-info/?handle={account}",
+      "uri_pretty": "https://www.geeksforgeeks.org/profile/{account}/",
+      "e_code": 200,
+      "e_string": "\"message\":\"data retrieved successfully\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Genius (Artist)",
+      "cat": "music",
+      "uri_check": "https://genius.com/artists/{account}",
+      "e_code": 200,
+      "e_string": "class=\"profile_header\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Genius (User)",
+      "cat": "music",
+      "uri_check": "https://genius.com/{account}",
+      "e_code": 200,
+      "e_string": "class=\"profile_header\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Geocaching",
+      "cat": "social",
+      "uri_check": "https://www.geocaching.com/p/?u={account}",
+      "e_code": 200,
+      "e_string": "class=\"hax-profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Gettr",
+      "cat": "social",
+      "uri_check": "https://gettr.com/api/s/uinf/{account}",
+      "uri_pretty": "https://gettr.com/user/{account}",
+      "e_code": 200,
+      "e_string": "\"rc\":\"OK\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Giphy (Channel)",
+      "cat": "images",
+      "uri_check": "https://giphy.com/channel/{account}",
+      "e_code": 200,
+      "e_string": "\\\"user_id\\\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Gitea",
+      "cat": "coding",
+      "uri_check": "https://gitea.com/api/v1/users/{account}",
+      "uri_pretty": "https://gitea.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Gitee",
+      "cat": "coding",
+      "uri_check": "https://gitee.com/{account}",
+      "e_code": 200,
+      "e_string": "class=\"ui container user_page\"",
+      "mode": "marker"
+    },
+    {
+      "name": "GitHub (Gists)",
+      "cat": "coding",
+      "uri_check": "https://api.github.com/users/{account}/gists",
+      "uri_pretty": "https://gist.github.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "GitHub (User)",
+      "cat": "coding",
+      "uri_check": "https://api.github.com/users/{account}",
+      "uri_pretty": "https://github.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "GitLab",
+      "cat": "coding",
+      "uri_check": "https://gitlab.com/api/v4/users?username={account}",
+      "uri_pretty": "https://gitlab.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "gloria.tv",
+      "cat": "social",
+      "uri_check": "https://gloria.tv/{account}",
+      "e_code": 200,
+      "e_string": "Last online",
+      "mode": "marker"
+    },
+    {
+      "name": "GNOME (GitLab)",
+      "cat": "coding",
+      "uri_check": "https://gitlab.gnome.org/api/v4/users?username={account}",
+      "uri_pretty": "https://gitlab.gnome.org/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "GNOME (Shell Extensions)",
+      "cat": "coding",
+      "uri_check": "https://extensions.gnome.org/accounts/profile/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user-details\"",
+      "mode": "marker"
+    },
+    {
+      "name": "GOG",
+      "cat": "gaming",
+      "uri_check": "https://www.gog.com/u/{account}",
+      "e_code": 200,
+      "e_string": "window.profilesData.profileUser",
+      "mode": "marker"
+    },
+    {
+      "name": "Goodgame_Russia",
+      "cat": "gaming",
+      "uri_check": "https://goodgame.ru/channel/{account}/",
+      "e_code": 200,
+      "e_string": "channel_id",
+      "mode": "marker"
+    },
+    {
+      "name": "gpodder.net",
+      "cat": "music",
+      "uri_check": "https://gpodder.net/user/{account}/",
+      "e_code": 200,
+      "e_string": "mdash; gpodder.net",
+      "mode": "marker"
+    },
+    {
+      "name": "grandprof",
+      "cat": "misc",
+      "uri_check": "https://grandprof.org/communaute/{account}",
+      "e_code": 200,
+      "e_string": "s Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "Graphics.social (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://graphics.social/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://graphics.social/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Gravatar",
+      "cat": "social",
+      "uri_check": "https://en.gravatar.com/{account}.json",
+      "uri_pretty": "https://en.gravatar.com/{account}",
+      "e_code": 200,
+      "e_string": "{\"entry\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Greasy Fork",
+      "cat": "tech",
+      "uri_check": "https://greasyfork.org/en/users?q={account}",
+      "e_code": 200,
+      "e_string": "class=\"user-list\"",
+      "mode": "marker"
+    },
+    {
+      "name": "GTAinside.com",
+      "cat": "gaming",
+      "uri_check": "https://www.gtainside.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user-profile-name\"",
+      "mode": "marker"
+    },
+    {
+      "name": "gumroad",
+      "cat": "shopping",
+      "uri_check": "https://{account}.gumroad.com/",
+      "e_code": 200,
+      "e_string": "s profile picture",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Habbo.com",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.com/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.com.br",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.com.br/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.com.br/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.com.tr",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.com.tr/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.com.tr/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.de",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.de/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.de/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.es",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.es/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.es/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.fi",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.fi/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.fi/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.fr",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.fr/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.fr/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.it",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.it/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.it/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habbo.nl",
+      "cat": "gaming",
+      "uri_check": "https://www.habbo.nl/api/public/users?name={account}",
+      "uri_pretty": "https://www.habbo.nl/profile/{account}",
+      "e_code": 200,
+      "e_string": "uniqueId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Habr (Q&A)",
+      "cat": "coding",
+      "uri_check": "https://qna.habr.com/user/{account}",
+      "e_code": 200,
+      "e_string": "class=\"page-header__info\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Habr (User)",
+      "cat": "social",
+      "uri_check": "https://habr.com/ru/users/{account}/",
+      "e_code": 200,
+      "e_string": "tm-page tm-user",
+      "mode": "marker"
+    },
+    {
+      "name": "Habtium",
+      "cat": "gaming",
+      "uri_check": "https://habtium.es/{account}",
+      "e_code": 200,
+      "e_string": "<div class=\"profile-info",
+      "mode": "marker"
+    },
+    {
+      "name": "Hackaday.io",
+      "cat": "hobby",
+      "uri_check": "https://hackaday.io/{account}",
+      "e_code": 200,
+      "e_string": "class=\"following-container \"",
+      "mode": "marker",
+      "strip_bad_char": "-"
+    },
+    {
+      "name": "HackAdvisor",
+      "cat": "tech",
+      "uri_check": "https://hackadvisor.io/api/v2/profile/{account}/",
+      "uri_pretty": "https://hackadvisor.io/hacker/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Hacker News",
+      "cat": "tech",
+      "uri_check": "https://hacker-news.firebaseio.com/v0/user/{account}.json?print=pretty",
+      "uri_pretty": "https://news.ycombinator.com/user?id={account}",
+      "e_code": 200,
+      "e_string": "\"id\" :",
+      "mode": "marker"
+    },
+    {
+      "name": "hackerearth",
+      "cat": "coding",
+      "uri_check": "https://www.hackerearth.com/@{account}",
+      "e_code": 200,
+      "e_string": "| Developer Profile on HackerEarth",
+      "mode": "marker"
+    },
+    {
+      "name": "Hackernoon",
+      "cat": "tech",
+      "uri_check": "https://hackernoon.com/_next/data/foL6JC7ro2FEEMD-gMKgQ/u/{account}.json",
+      "uri_pretty": "https://hackernoon.com/u/{account}",
+      "e_code": 200,
+      "e_string": "\"profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "HackerOne",
+      "cat": "tech",
+      "mode": "profile",
+      "uri_check": "https://hackerone.com/{account}"
+    },
+    {
+      "name": "HackerRank",
+      "cat": "tech",
+      "uri_check": "https://www.hackerrank.com/rest/contests/master/hackers/{account}/profile",
+      "uri_pretty": "https://www.hackerrank.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"model\":",
+      "mode": "marker"
+    },
+    {
+      "name": "hackrocks",
+      "cat": "tech",
+      "mode": "profile",
+      "uri_check": "https://hackrocks.com/id/{account}"
+    },
+    {
+      "name": "Hackster",
+      "cat": "coding",
+      "uri_check": "https://www.hackster.io/{account}",
+      "e_code": 200,
+      "e_string": "data-hypernova-key=\"UserProfile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "hamaha",
+      "cat": "finance",
+      "uri_check": "https://hamaha.net/{account}",
+      "e_code": 200,
+      "e_string": "id=\"profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Hanime",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://hanime.tv/channels/{account}",
+      "e_code": 200,
+      "e_string": "Channel Views",
+      "mode": "marker"
+    },
+    {
+      "name": "Hashnode",
+      "cat": "tech",
+      "mode": "profile",
+      "uri_check": "https://hashnode.com/@{account}"
+    },
+    {
+      "name": "Hcommons.social (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://hcommons.social/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://hcommons.social/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Heylink",
+      "cat": "misc",
+      "uri_check": "https://heylink.me/{account}/",
+      "e_code": 200,
+      "e_string": "HeyLink.me |",
+      "mode": "marker"
+    },
+    {
+      "name": "HiHello",
+      "cat": "business",
+      "uri_check": "https://www.hihello.com/author/{account}",
+      "e_code": 200,
+      "e_string": "\"mainEntity\": {",
+      "mode": "marker"
+    },
+    {
+      "name": "Holopin",
+      "cat": "hobby",
+      "mode": "profile",
+      "uri_check": "https://holopin.io/@{account}#"
+    },
+    {
+      "name": "Home Design 3D",
+      "cat": "hobby",
+      "uri_check": "https://www.homedesign3d.net/user/{account}",
+      "e_code": 200,
+      "e_string": "id=\"user_content\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Hometech.social (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://hometech.social/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://hometech.social/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "hoo.be",
+      "cat": "social",
+      "uri_check": "https://hoo.be/{account}",
+      "e_code": 200,
+      "e_string": "ProfilePage\",\"mainEntity",
+      "mode": "marker"
+    },
+    {
+      "name": "Hostux.social (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://hostux.social/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://hostux.social/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Houzz",
+      "cat": "hobby",
+      "uri_check": "https://www.houzz.com/user/{account}",
+      "e_code": 200,
+      "e_string": "Followers",
+      "mode": "marker"
+    },
+    {
+      "name": "HubPages",
+      "cat": "blog",
+      "uri_check": "https://hubpages.com/@{account}",
+      "e_code": 200,
+      "e_string": "name\">Followers",
+      "mode": "marker"
+    },
+    {
+      "name": "HudsonRock",
+      "cat": "tech",
+      "uri_check": "https://cavalier.hudsonrock.com/api/json/v2/osint-tools/search-by-username?username={account}",
+      "e_code": 200,
+      "e_string": "This username is associated with a computer that was infected by an info-stealer",
+      "mode": "marker"
+    },
+    {
+      "name": "HuggingFace",
+      "cat": "tech",
+      "uri_check": "https://huggingface.co/{account}",
+      "e_code": 200,
+      "e_string": "data-target=\"UserProfile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "HulkShare",
+      "cat": "social",
+      "uri_check": "https://www.hulkshare.com/{account}",
+      "e_code": 200,
+      "e_string": "id=\"profile_image\"",
+      "mode": "marker"
+    },
+    {
+      "name": "icq-chat",
+      "cat": "social",
+      "uri_check": "https://icq.icqchat.co/members/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"memberHeader-mainContent",
+      "mode": "marker"
+    },
+    {
+      "name": "IFTTT",
+      "cat": "misc",
+      "uri_check": "https://ifttt.com/p/{account}",
+      "e_code": 200,
+      "e_string": "Joined",
+      "mode": "marker"
+    },
+    {
+      "name": "ifunny",
+      "cat": "misc",
+      "uri_check": "https://ifunny.co/user/{account}",
+      "e_code": 200,
+      "e_string": "subscribers",
+      "mode": "marker"
+    },
+    {
+      "name": "igromania",
+      "cat": "social",
+      "uri_check": "https://forum.igromania.ru/member.php?username={account}",
+      "e_code": 200,
+      "e_string": "Форум Игромании - Просмотр профиля:",
+      "mode": "marker"
+    },
+    {
+      "name": "ILGM Growers Forum",
+      "cat": "social",
+      "uri_check": "https://ilgmforum.com/u/{account}/summary.json",
+      "uri_pretty": "https://ilgmforum.com/u/{account}/summary",
+      "e_code": 200,
+      "e_string": "user_summary\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "imagefap",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.imagefap.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "s Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "ImageShack",
+      "cat": "images",
+      "uri_check": "https://imageshack.com/user/{account}",
+      "e_code": 200,
+      "e_string": "s Images</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "iMGSRC.RU",
+      "cat": "images",
+      "uri_check": "https://imgsrc.ru/main/user.php?lang=ru&user={account}",
+      "e_code": 200,
+      "e_string": "Присоединился",
+      "mode": "marker"
+    },
+    {
+      "name": "Imgur",
+      "cat": "images",
+      "uri_check": "https://api.imgur.com/account/v1/accounts/{account}?client_id=546c25a59c58ad7",
+      "uri_pretty": "https://imgur.com/user/{account}/about",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Immunefi",
+      "cat": "tech",
+      "uri_check": "https://immunefi.com/profile/{account}/",
+      "e_code": 200,
+      "e_string": "content=\"profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "inaturalist",
+      "cat": "hobby",
+      "uri_check": "https://api.inaturalist.org/v1/users/{account}",
+      "uri_pretty": "https://inaturalist.nz/people/{account}",
+      "e_code": 200,
+      "e_string": "\"results\":[{",
+      "mode": "marker"
+    },
+    {
+      "name": "Independent academia",
+      "cat": "hobby",
+      "uri_check": "https://independent.academia.edu/{account}",
+      "e_code": 200,
+      "e_string": "- Academia.edu",
+      "mode": "marker"
+    },
+    {
+      "name": "InkBunny",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://inkbunny.net/{account}",
+      "e_code": 200,
+      "e_string": "Profile | Inkbunny, the Furry Art Community</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "InsaneJournal",
+      "cat": "social",
+      "uri_check": "https://{account}.insanejournal.com/profile",
+      "e_code": 200,
+      "e_string": "User:",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Instagram",
+      "cat": "social",
+      "uri_check": "https://www.instagram.com/{account}/",
+      "e_code": 200,
+      "e_string": "Posts - See Instagram photos and videos from",
+      "mode": "marker"
+    },
+    {
+      "name": "Instagram (Imginn)",
+      "cat": "social",
+      "uri_check": "https://imginn.com/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"userinfo\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Instagram_archives",
+      "cat": "social",
+      "mode": "marker",
+      "uri_check": "https://archive.org/wayback/available?url=https://instagram.com/{account}/",
+      "e_code": 200,
+      "e_string": "\"archived_snapshots\": {\"closest\""
+    },
+    {
+      "name": "Instructables",
+      "cat": "hobby",
+      "uri_check": "https://www.instructables.com/json-api/showAuthorExists?screenName={account}",
+      "uri_pretty": "https://www.instructables.com/member/{account}/",
+      "e_code": 200,
+      "e_string": "\"exists\": true",
+      "mode": "marker"
+    },
+    {
+      "name": "Internet Archive User Contribution Search",
+      "cat": "misc",
+      "uri_check": "https://archive.org/advancedsearch.php?q=creator:{account}&output=json",
+      "uri_pretty": "https://archive.org/search.php?query=creator:{account}",
+      "e_code": 200,
+      "e_string": "backup_location",
+      "mode": "marker"
+    },
+    {
+      "name": "Internet Archive Username Mentions",
+      "cat": "misc",
+      "uri_check": "https://archive.org/advancedsearch.php?q={account}&output=json",
+      "uri_pretty": "https://archive.org/search.php?query={account}",
+      "e_code": 200,
+      "e_string": "backup_location",
+      "mode": "marker"
+    },
+    {
+      "name": "interpals",
+      "cat": "dating",
+      "uri_check": "https://www.interpals.net/{account}",
+      "e_code": 200,
+      "e_string": "Looking for",
+      "mode": "marker"
+    },
+    {
+      "name": "Intigriti",
+      "cat": "tech",
+      "uri_check": "https://app.intigriti.com/api/user/public/profile/{account}",
+      "uri_pretty": "https://app.intigriti.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"userName\":",
+      "mode": "marker"
+    },
+    {
+      "name": "itch.io",
+      "cat": "gaming",
+      "uri_check": "https://itch.io/profile/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user_data\"",
+      "mode": "marker"
+    },
+    {
+      "name": "JapanDict",
+      "cat": "social",
+      "uri_check": "https://forum.japandict.com/u/{account}",
+      "e_code": 200,
+      "e_string": "class=\"UserPage\"",
+      "mode": "marker"
+    },
+    {
+      "name": "JBZD",
+      "cat": "images",
+      "uri_check": "https://jbzd.com.pl/uzytkownik/{account}",
+      "e_code": 200,
+      "e_string": "Dzidy użytkownika",
+      "mode": "marker"
+    },
+    {
+      "name": "jeja.pl",
+      "cat": "misc",
+      "uri_check": "https://www.jeja.pl/user,{account}",
+      "e_code": 200,
+      "e_string": "Profil użytkownika",
+      "mode": "marker"
+    },
+    {
+      "name": "Jeuxvideo",
+      "cat": "gaming",
+      "uri_check": "https://www.jeuxvideo.com/profil/{account}?mode=infos",
+      "e_code": 200,
+      "e_string": "- jeuxvideo.com",
+      "mode": "marker"
+    },
+    {
+      "name": "Joe Monster",
+      "cat": "misc",
+      "uri_check": "https://joemonster.org/bojownik/{account}",
+      "e_code": 200,
+      "e_string": "jest prywatny",
+      "mode": "marker"
+    },
+    {
+      "name": "Justforfans",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://justfor.fans/{account}",
+      "e_code": 200,
+      "e_string": " @ JustFor.Fans",
+      "mode": "marker"
+    },
+    {
+      "name": "Kaggle",
+      "cat": "coding",
+      "uri_check": "https://www.kaggle.com/{account}",
+      "e_code": 200,
+      "e_string": "property=\"og:username\"",
+      "mode": "marker"
+    },
+    {
+      "name": "kashipara",
+      "cat": "tech",
+      "mode": "profile",
+      "uri_check": "https://www.kashipara.com/profile/user/{account}"
+    },
+    {
+      "name": "Keybase",
+      "cat": "social",
+      "uri_check": "https://keybase.io/_/api/1.0/user/lookup.json?usernames={account}",
+      "uri_pretty": "https://keybase.io/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Kick",
+      "cat": "social",
+      "uri_check": "https://kick.com/api/v2/channels/{account}",
+      "uri_pretty": "https://kick.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Kickstarter",
+      "cat": "shopping",
+      "uri_check": "https://www.kickstarter.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "projects",
+      "mode": "marker"
+    },
+    {
+      "name": "kik",
+      "cat": "social",
+      "uri_check": "https://kik.me/{account}",
+      "e_code": 200,
+      "e_string": "/thumb.jpg\"/>",
+      "mode": "marker"
+    },
+    {
+      "name": "KnowYourMeme",
+      "cat": "social",
+      "uri_check": "https://knowyourmeme.com/users/{account}",
+      "e_code": 200,
+      "e_string": "Contributions",
+      "mode": "marker"
+    },
+    {
+      "name": "Ko-Fi",
+      "cat": "social",
+      "uri_check": "https://ko-fi.com/{account}",
+      "e_code": 200,
+      "e_string": "id=\"profile-header\"",
+      "mode": "marker"
+    },
+    {
+      "name": "komi",
+      "cat": "social",
+      "uri_check": "https://api.komi.io/api/talent/usernames/{account}",
+      "uri_pretty": "https://{account}.komi.io",
+      "e_code": 200,
+      "e_string": "accountStatus\":\"active",
+      "mode": "marker"
+    },
+    {
+      "name": "Kongregate",
+      "cat": "gaming",
+      "uri_check": "https://www.kongregate.com/accounts/{account}",
+      "e_code": 200,
+      "e_string": "Member Since",
+      "mode": "marker"
+    },
+    {
+      "name": "Kwai",
+      "cat": "social",
+      "uri_check": "https://www.kwai.com/@{account}",
+      "e_code": 200,
+      "e_string": "name=\"title\"",
+      "mode": "marker"
+    },
+    {
+      "name": "kwejk.pl",
+      "cat": "images",
+      "uri_check": "https://kwejk.pl/uzytkownik/{account}#/tablica/",
+      "e_code": 200,
+      "e_string": "Kwejki użytkownika",
+      "mode": "marker"
+    },
+    {
+      "name": "Kwork",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://kwork.ru/user/{account}"
+    },
+    {
+      "name": "Last.fm",
+      "cat": "music",
+      "uri_check": "https://www.last.fm/user/{account}",
+      "e_code": 200,
+      "e_string": "class=\"header-info\"",
+      "mode": "marker"
+    },
+    {
+      "name": "LeakIX",
+      "cat": "tech",
+      "uri_check": "https://leakix.net/u/{account}",
+      "e_code": 200,
+      "e_string": ">Joined ",
+      "mode": "marker"
+    },
+    {
+      "name": "Learn CW Online",
+      "cat": "hobby",
+      "mode": "profile",
+      "uri_check": "https://lcwo.net/profile/{account}"
+    },
+    {
+      "name": "LeetCode",
+      "cat": "coding",
+      "mode": "profile",
+      "uri_check": "https://leetcode.com/u/{account}/"
+    },
+    {
+      "name": "Lemon8",
+      "cat": "social",
+      "uri_check": "https://www.lemon8-app.com/{account}?region=us",
+      "e_code": 200,
+      "e_string": "id=\"user-description\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Letterboxd",
+      "cat": "social",
+      "uri_check": "https://letterboxd.com/{account}/",
+      "e_code": 200,
+      "e_string": "’s profile on Letterboxd",
+      "mode": "marker"
+    },
+    {
+      "name": "LevelBlue",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://otx.alienvault.com/user/{account}/pulses"
+    },
+    {
+      "name": "Liberapay",
+      "cat": "finance",
+      "uri_check": "https://liberapay.com/{account}",
+      "e_code": 200,
+      "e_string": "class=\"profile-header\"",
+      "mode": "marker"
+    },
+    {
+      "name": "LibraryThing",
+      "cat": "hobby",
+      "uri_check": "https://www.librarything.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "<dt>Joined</dt>",
+      "mode": "marker"
+    },
+    {
+      "name": "Libretooth.gr (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://libretooth.gr/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://libretooth.gr/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "lichess.org",
+      "cat": "gaming",
+      "uri_check": "https://lichess.org/api/player/autocomplete?term={account}&exists=1",
+      "uri_pretty": "https://lichess.org/@/{account}",
+      "e_code": 200,
+      "e_string": "true",
+      "mode": "marker"
+    },
+    {
+      "name": "LINE",
+      "cat": "social",
+      "uri_check": "https://line.me/R/ti/p/@{account}?from=page",
+      "e_code": 200,
+      "e_string": "Add LINE friend",
+      "mode": "marker"
+    },
+    {
+      "name": "Linktree",
+      "cat": "social",
+      "uri_check": "https://linktr.ee/{account}",
+      "e_code": 200,
+      "e_string": "\"uuid\":",
+      "mode": "marker"
+    },
+    {
+      "name": "linux.org.ru",
+      "cat": "tech",
+      "uri_check": "https://www.linux.org.ru/people/{account}/profile",
+      "e_code": 200,
+      "e_string": "Дата регистрации",
+      "mode": "marker"
+    },
+    {
+      "name": "LiveJasmin",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.livejasmin.com/en/flash/get-performer-details/{account}",
+      "uri_pretty": "https://www.livejasmin.com/en/chat/{account}",
+      "e_code": 200,
+      "e_string": "\"success\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "Livejournal",
+      "cat": "blog",
+      "uri_check": "https://{account}.livejournal.com",
+      "e_code": 200,
+      "e_string": "<link rel=\"canonical\" href=\"",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "livemaster.ru",
+      "cat": "shopping",
+      "uri_check": "https://www.livemaster.ru/{account}",
+      "e_code": 200,
+      "e_string": "<title>Магазин мастера",
+      "mode": "marker"
+    },
+    {
+      "name": "lobste.rs",
+      "cat": "tech",
+      "uri_check": "https://lobste.rs/u/{account}",
+      "e_code": 200,
+      "e_string": "Joined",
+      "mode": "marker"
+    },
+    {
+      "name": "LoLProfile",
+      "cat": "gaming",
+      "uri_check": "https://lolprofile.net/search/world/{account}-world",
+      "e_code": 200,
+      "e_string": "class=\"content sw\">",
+      "mode": "marker"
+    },
+    {
+      "name": "Lor.sh (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://lor.sh/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://lor.sh/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "lowcygier.pl",
+      "cat": "gaming",
+      "uri_check": "https://bazar.lowcygier.pl/user/{account}",
+      "e_code": 200,
+      "e_string": "Zarejestrowany",
+      "mode": "marker"
+    },
+    {
+      "name": "Magix",
+      "cat": "music",
+      "uri_check": "https://www.magix.info/us/users/profile/{account}/",
+      "e_code": 200,
+      "e_string": "About me",
+      "mode": "marker"
+    },
+    {
+      "name": "Magnific",
+      "cat": "art",
+      "uri_check": "https://www.magnific.com/app/api/community/creator-info-by-name?creator_name={account}&lang=en_US",
+      "uri_pretty": "https://www.magnific.com/app/creator/{account}",
+      "e_code": 200,
+      "e_string": "\"creator\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Malpedia Actors",
+      "cat": "tech",
+      "uri_check": "https://malpedia.caad.fkie.fraunhofer.de/actor/{account}",
+      "e_code": 200,
+      "e_string": "href=\"/actors\"",
+      "mode": "marker"
+    },
+    {
+      "name": "MapMyTracks",
+      "cat": "health",
+      "uri_check": "https://www.mapmytracks.com/{account}",
+      "e_code": 200,
+      "e_string": "class=\"profile-header\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Mapstodon.space (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://mapstodon.space/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://mapstodon.space/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Maroc_nl",
+      "cat": "social",
+      "uri_check": "https://www.maroc.nl/forums/members/{account}.html",
+      "e_code": 200,
+      "e_string": "Bekijk Profiel:",
+      "mode": "marker"
+    },
+    {
+      "name": "Marshmallow",
+      "cat": "social",
+      "uri_check": "https://marshmallow-qa.com/{account}",
+      "e_code": 200,
+      "e_string": "さんにメッセージをおくる",
+      "mode": "marker"
+    },
+    {
+      "name": "Martech",
+      "cat": "business",
+      "uri_check": "https://martech.org/author/{account}/",
+      "e_code": 200,
+      "e_string": "twitter:site",
+      "mode": "marker"
+    },
+    {
+      "name": "Massage Anywhere",
+      "cat": "health",
+      "uri_check": "https://www.massageanywhere.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "<title>MassageAnywhere.com Profile for ",
+      "mode": "marker"
+    },
+    {
+      "name": "masto.ai",
+      "cat": "social",
+      "uri_check": "https://masto.ai/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://masto.ai/@{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Masto.nyc (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://masto.nyc/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://masto.nyc/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon API",
+      "cat": "social",
+      "uri_check": "https://mastodon.social/api/v2/search?q={account}&limit=1&type=accounts",
+      "uri_pretty": "https://mastodon.social/api/v2/search?q={account}&type=accounts",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-101010.pl",
+      "cat": "social",
+      "uri_check": "https://101010.pl/@{account}",
+      "e_code": 200,
+      "e_string": "@101010.pl",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-C.IM",
+      "cat": "social",
+      "uri_check": "https://c.im/@{account}",
+      "e_code": 200,
+      "e_string": "@c.im) - C.IM</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-Chaos.social",
+      "cat": "social",
+      "uri_check": "https://chaos.social/@{account}",
+      "e_code": 200,
+      "e_string": "@chaos.social) - chaos.social</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-Defcon",
+      "cat": "social",
+      "uri_check": "https://defcon.social/@{account}",
+      "e_code": 200,
+      "e_string": "- DEF CON Social</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-mastodon",
+      "cat": "social",
+      "uri_check": "https://mastodon.social/@{account}",
+      "e_code": 200,
+      "e_string": "profile:username",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-meow.social",
+      "cat": "social",
+      "uri_check": "https://meow.social/@{account}",
+      "e_code": 200,
+      "e_string": "- the mastodon instance for creatures fluffy, scaly and otherwise</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-mstdn.io",
+      "cat": "social",
+      "uri_check": "https://mstdn.io/@{account}",
+      "e_code": 200,
+      "e_string": "@mstdn.io) - Mastodon",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-rigcz.club",
+      "cat": "social",
+      "uri_check": "https://rigcz.club/@{account}",
+      "e_code": 200,
+      "e_string": "@rigcz.club",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-social_tchncs",
+      "cat": "social",
+      "uri_check": "https://social.tchncs.de/@{account}",
+      "e_code": 200,
+      "e_string": "profile:username",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon-Toot.Community",
+      "cat": "social",
+      "uri_check": "https://toot.community/@{account}",
+      "e_code": 200,
+      "e_string": "@toot.community) - toot.community</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodon.online",
+      "cat": "social",
+      "uri_check": "https://mastodon.online/@{account}",
+      "e_code": 200,
+      "e_string": "@mastodon.online) - Mastodon</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Mastodonbooks.net (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://mastodonbooks.net/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://mastodonbooks.net/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "MAX",
+      "cat": "social",
+      "uri_check": "https://max.ru/{account}",
+      "e_code": 200,
+      "e_string": "в мессенджере MAX</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "MCUUID (Minecraft)",
+      "cat": "gaming",
+      "uri_check": "https://playerdb.co/api/player/minecraft/{account}",
+      "uri_pretty": "https://mcuuid.net/?q={account}",
+      "e_code": 200,
+      "e_string": "Successfully found player by given ID.",
+      "mode": "marker"
+    },
+    {
+      "name": "Medium",
+      "cat": "news",
+      "uri_check": "https://medium.com/@{account}/about",
+      "e_code": 200,
+      "e_string": "Medium member since",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "meet me",
+      "cat": "dating",
+      "uri_check": "https://www.meetme.com/{account}",
+      "e_code": 200,
+      "e_string": "<title>Meet people like ",
+      "mode": "marker"
+    },
+    {
+      "name": "Meta-Wiki (Wikimedia)",
+      "cat": "news",
+      "uri_check": "https://meta.wikimedia.org/wiki/Special:CentralAuth?target={account}",
+      "e_code": 200,
+      "e_string": "id='mw-centralauth-info'",
+      "mode": "marker"
+    },
+    {
+      "name": "metacritic",
+      "cat": "hobby",
+      "uri_check": "https://www.metacritic.com/user/{account}/",
+      "e_code": 200,
+      "e_string": "data-testid=\"profile-name\">",
+      "mode": "marker"
+    },
+    {
+      "name": "Microsoft Learn",
+      "cat": "tech",
+      "uri_check": "https://learn.microsoft.com/api/profiles/{account}",
+      "uri_pretty": "https://learn.microsoft.com/en-us/users/{account}/",
+      "e_code": 200,
+      "e_string": "\"userId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Minds",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://www.minds.com/{account}/"
+    },
+    {
+      "name": "Minecraft List",
+      "cat": "gaming",
+      "uri_check": "https://minecraftlist.com/api/legacy/players/{account}",
+      "uri_pretty": "https://minecraftlist.com/players/{account}",
+      "e_code": 200,
+      "e_string": "\"found\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "mintme",
+      "cat": "finance",
+      "uri_check": "https://www.mintme.com/token/{account}",
+      "e_code": 200,
+      "e_string": "token | mintMe",
+      "mode": "marker"
+    },
+    {
+      "name": "Mistrzowie",
+      "cat": "images",
+      "uri_check": "https://mistrzowie.org/user/{account}",
+      "e_code": 200,
+      "e_string": "Profil użytkownika",
+      "mode": "marker"
+    },
+    {
+      "name": "Mix",
+      "cat": "social",
+      "uri_check": "https://mix.com/{account}/",
+      "e_code": 200,
+      "e_string": "<title>@",
+      "mode": "marker"
+    },
+    {
+      "name": "Mixcloud",
+      "cat": "music",
+      "uri_check": "https://api.mixcloud.com/{account}/",
+      "uri_pretty": "https://www.mixcloud.com/{account}/",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Mixi",
+      "cat": "social",
+      "uri_check": "https://mixi.jp/view_community.pl?id={account}",
+      "e_code": 200,
+      "e_string": "| mixiコミュニティ</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Mixlr",
+      "cat": "music",
+      "uri_check": "https://api.mixlr.com/users/{account}",
+      "uri_pretty": "https://mixlr.com/{account}/",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Mmorpg",
+      "cat": "gaming",
+      "uri_check": "https://forums.mmorpg.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "MMORPG.com Forums",
+      "mode": "marker"
+    },
+    {
+      "name": "MobileGTA.net",
+      "cat": "gaming",
+      "uri_check": "https://www.mobilegta.net/en/user/{account}",
+      "e_code": 200,
+      "e_string": "userpage_user",
+      "mode": "marker"
+    },
+    {
+      "name": "Mod DB",
+      "cat": "gaming",
+      "uri_check": "https://www.moddb.com/html/scripts/autocomplete.php?a=username&q={account}",
+      "uri_pretty": "https://www.moddb.com/members/{account}",
+      "e_code": 200,
+      "e_string": "\"available\":false",
+      "mode": "marker"
+    },
+    {
+      "name": "MODX.im",
+      "cat": "tech",
+      "uri_check": "https://modx.evo.im/profile/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Monkeytype",
+      "cat": "coding",
+      "uri_check": "https://api.monkeytype.com/users/{account}/profile",
+      "uri_pretty": "https://monkeytype.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"message\":\"Profile retrieved\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Moto Trip",
+      "cat": "hobby",
+      "uri_check": "https://moto-trip.com/profil/{account}",
+      "e_code": 200,
+      "e_string": "<h1 class=\"h2\">Profil de ",
+      "mode": "marker"
+    },
+    {
+      "name": "Motokiller",
+      "cat": "images",
+      "uri_check": "https://mklr.pl/user/{account}",
+      "e_code": 200,
+      "e_string": "Zamieszcza materiały od:",
+      "mode": "marker"
+    },
+    {
+      "name": "Moxfield",
+      "cat": "gaming",
+      "uri_check": "https://api2.moxfield.com/v1/users/{account}",
+      "uri_pretty": "https://www.moxfield.com/users/{account}",
+      "e_code": 200,
+      "e_string": "\"userName\":",
+      "mode": "marker"
+    },
+    {
+      "name": "mssg.me",
+      "cat": "social",
+      "uri_check": "https://{account}.mssg.me/",
+      "e_code": 200,
+      "e_string": "property=\"og:title\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Muck Rack",
+      "cat": "news",
+      "uri_check": "https://muckrack.com/{account}",
+      "e_code": 200,
+      "e_string": "on Muck Rack",
+      "mode": "marker"
+    },
+    {
+      "name": "Musician.social (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://musician.social/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://musician.social/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "musictraveler",
+      "cat": "music",
+      "uri_check": "https://www.musictraveler.com/en/users/{account}/",
+      "e_code": 200,
+      "e_string": "on Music Traveler</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "MUYZORRAS",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.muyzorras.com/usuarios/{account}",
+      "e_code": 200,
+      "e_string": "og:title",
+      "mode": "marker"
+    },
+    {
+      "name": "my_instants",
+      "cat": "music",
+      "uri_check": "https://www.myinstants.com/en/profile/{account}/",
+      "e_code": 200,
+      "e_string": " | Myinstants</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "MyAnimeList",
+      "cat": "social",
+      "uri_check": "https://myanimelist.net/profile/{account}",
+      "e_code": 200,
+      "e_string": "Profile - MyAnimeList.net",
+      "mode": "marker"
+    },
+    {
+      "name": "MyBuilder",
+      "cat": "business",
+      "uri_check": "https://www.mybuilder.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"legalName\":",
+      "mode": "marker"
+    },
+    {
+      "name": "myfitnesspal Author",
+      "cat": "health",
+      "uri_check": "https://blog.myfitnesspal.com/author/{account}/",
+      "e_code": 200,
+      "e_string": "\"isPartOf\":",
+      "mode": "marker"
+    },
+    {
+      "name": "myfitnesspal Community",
+      "cat": "health",
+      "uri_check": "https://community.myfitnesspal.com/en/profile/{account}",
+      "e_code": 200,
+      "e_string": ">Last Active<",
+      "mode": "marker"
+    },
+    {
+      "name": "MyLot",
+      "cat": "social",
+      "uri_check": "https://www.mylot.com/{account}",
+      "e_code": 200,
+      "e_string": "on myLot</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "MYM",
+      "cat": "social",
+      "uri_check": "https://mym.fans/{account}",
+      "e_code": 200,
+      "e_string": "class=\"page profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "MyNickname",
+      "cat": "misc",
+      "uri_check": "https://mynickname.com/en/search?q={account}",
+      "e_code": 200,
+      "e_string": "nickname found:</h2>",
+      "mode": "marker"
+    },
+    {
+      "name": "MySpace",
+      "cat": "social",
+      "uri_check": "https://myspace.com/{account}",
+      "e_code": 200,
+      "e_string": "<!-- Profile -->",
+      "mode": "marker"
+    },
+    {
+      "name": "myWishBoard",
+      "cat": "shopping",
+      "uri_check": "https://mywishboard.com/@{account}",
+      "e_code": 200,
+      "e_string": "user.profile\\\",\\\"login\\\":",
+      "mode": "marker"
+    },
+    {
+      "name": "naija_planet",
+      "cat": "dating",
+      "uri_check": "https://naijaplanet.com/{account}",
+      "e_code": 200,
+      "e_string": "dating Profile, ",
+      "mode": "marker"
+    },
+    {
+      "name": "nairaland",
+      "cat": "news",
+      "uri_check": "https://www.nairaland.com/{account}",
+      "e_code": 200,
+      "e_string": "s Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "NaturalNews",
+      "cat": "political",
+      "uri_check": "https://naturalnews.com/author/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"Headline\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Naver",
+      "cat": "social",
+      "uri_check": "https://blog.naver.com/{account}",
+      "e_code": 200,
+      "e_string": " : 네이버 블로그",
+      "mode": "marker"
+    },
+    {
+      "name": "Neocities",
+      "cat": "social",
+      "uri_check": "https://neocities.org/site/{account}",
+      "e_code": 200,
+      "e_string": "noindex, follow",
+      "mode": "marker"
+    },
+    {
+      "name": "Newgrounds",
+      "cat": "gaming",
+      "uri_check": "https://{account}.newgrounds.com/",
+      "e_code": 200,
+      "e_string": "user-header-name",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "newmeet",
+      "cat": "dating",
+      "uri_check": "https://www.newmeet.com/en/profile/{account}/",
+      "e_code": 200,
+      "e_string": "<h2>The profile of",
+      "mode": "marker"
+    },
+    {
+      "name": "Nifty Gateway",
+      "cat": "social",
+      "uri_check": "https://api.niftygateway.com/user/profile-and-offchain-nifties-by-url/?profile_url={account}",
+      "uri_pretty": "https://www.niftygateway.com/profile/{account}/",
+      "e_code": 200,
+      "e_string": "&quot;didSucceed&quot;: true",
+      "mode": "marker"
+    },
+    {
+      "name": "Nightbot",
+      "cat": "social",
+      "uri_check": "https://api.nightbot.tv/1/channels/t/{account}",
+      "uri_pretty": "https://nightbot.tv/t/{account}/commands",
+      "e_code": 200,
+      "e_string": "\"status\":200",
+      "mode": "marker"
+    },
+    {
+      "name": "Nih Buat Jajan",
+      "cat": "social",
+      "uri_check": "https://www.nihbuatjajan.com/manifest/{account}.json",
+      "uri_pretty": "https://www.nihbuatjajan.com/{account}",
+      "e_code": 200,
+      "e_string": "\"name\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Nitecrew (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://nitecrew.rip/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://nitecrew.rip/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "nnru",
+      "cat": "social",
+      "uri_check": "https://{account}.www.nn.ru",
+      "e_code": 200,
+      "e_string": "<title> ",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "NotABug",
+      "cat": "coding",
+      "uri_check": "https://notabug.org/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Note",
+      "cat": "social",
+      "uri_check": "https://note.com/api/v2/creators/{account}",
+      "uri_pretty": "https://note.com/{account}",
+      "e_code": 200,
+      "e_string": "\"data\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "npm",
+      "cat": "coding",
+      "uri_check": "https://www.npmjs.com/~{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "oglaszamy24h.pl",
+      "cat": "shopping",
+      "uri_check": "https://oglaszamy24h.pl/profil,{account}",
+      "e_code": 200,
+      "e_string": "Profil użytkownika:",
+      "mode": "marker"
+    },
+    {
+      "name": "ok.ru",
+      "cat": "social",
+      "uri_check": "https://ok.ru/{account}",
+      "e_code": 200,
+      "e_string": "| OK",
+      "mode": "marker"
+    },
+    {
+      "name": "okidoki",
+      "cat": "misc",
+      "uri_check": "https://m.okidoki.ee/ru/users/{account}/",
+      "e_code": 200,
+      "e_string": "Пользователь",
+      "mode": "marker"
+    },
+    {
+      "name": "omg.lol",
+      "cat": "social",
+      "uri_check": "https://api.omg.lol/address/{account}/info",
+      "uri_pretty": "https://{account}.omg.lol",
+      "e_code": 200,
+      "e_string": "\"success\": true",
+      "mode": "marker",
+      "strip_bad_char": "@."
+    },
+    {
+      "name": "OP.GG",
+      "cat": "gaming",
+      "uri_check": "https://eune.op.gg/summoners/eune/{account}",
+      "e_code": 200,
+      "e_string": "- Summoner Stats - League of Legends",
+      "mode": "marker"
+    },
+    {
+      "name": "Opencollective",
+      "cat": "finance",
+      "uri_check": "https://opencollective.com/{account}",
+      "e_code": 200,
+      "e_string": "- Open Collective",
+      "mode": "marker"
+    },
+    {
+      "name": "OpenSource",
+      "cat": "tech",
+      "uri_check": "https://opensource.com/users/{account}",
+      "e_code": 200,
+      "e_string": "\"contentID\":",
+      "mode": "marker"
+    },
+    {
+      "name": "OpenStreetMap",
+      "cat": "social",
+      "uri_check": "https://www.openstreetmap.org/user/{account}",
+      "e_code": 200,
+      "e_string": "Mapper since:",
+      "mode": "marker"
+    },
+    {
+      "name": "OpenStreetMap Wiki",
+      "cat": "social",
+      "uri_check": "https://wiki.openstreetmap.org/w/api.php?action=query&format=json&list=users&ususers={account}",
+      "uri_pretty": "https://wiki.openstreetmap.org/wiki/User:{account}",
+      "e_code": 200,
+      "e_string": "\"userid\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Oper.ru",
+      "cat": "tech",
+      "uri_check": "https://oper.ru/visitors/info.php?t={account}",
+      "e_code": 200,
+      "e_string": "Информация о пользователе",
+      "mode": "marker"
+    },
+    {
+      "name": "Origins.Habbo.com",
+      "cat": "gaming",
+      "uri_check": "https://origins.habbo.com/api/public/users?name={account}",
+      "e_code": 200,
+      "e_string": "uniqueId",
+      "mode": "marker"
+    },
+    {
+      "name": "Origins.Habbo.com.br",
+      "cat": "gaming",
+      "uri_check": "https://origins.habbo.com.br/api/public/users?name={account}",
+      "e_code": 200,
+      "e_string": "uniqueId",
+      "mode": "marker"
+    },
+    {
+      "name": "Origins.Habbo.es",
+      "cat": "gaming",
+      "uri_check": "https://origins.habbo.es/api/public/users?name={account}",
+      "e_code": 200,
+      "e_string": "uniqueId",
+      "mode": "marker"
+    },
+    {
+      "name": "osu!",
+      "cat": "gaming",
+      "uri_check": "https://osu.ppy.sh/users/{account}",
+      "e_code": 302,
+      "e_string": "",
+      "mode": "marker"
+    },
+    {
+      "name": "palnet",
+      "cat": "social",
+      "uri_check": "https://www.palnet.io/@{account}/",
+      "e_code": 200,
+      "e_string": "class=\"profile-cover\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Paragraph",
+      "cat": "blog",
+      "uri_check": "https://paragraph.com/api/blogs/@{account}",
+      "uri_pretty": "https://paragraph.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"user\":{",
+      "mode": "marker",
+      "headers": {
+        "Accept": "application/json"
+      }
+    },
+    {
+      "name": "Parler",
+      "cat": "social",
+      "uri_check": "https://parler.com/user/{account}",
+      "e_code": 200,
+      "e_string": "People to Follow",
+      "mode": "marker"
+    },
+    {
+      "name": "Parler archived posts",
+      "cat": "archived",
+      "mode": "marker",
+      "uri_check": "http://archive.org/wayback/available?url=https://parler.com/profile/{account}/posts",
+      "uri_pretty": "https://web.archive.org/web/2/https://parler.com/profile/{account}/posts",
+      "e_code": 200,
+      "e_string": "\"archived_snapshots\": {\"closest\""
+    },
+    {
+      "name": "Parler archived profile",
+      "cat": "archived",
+      "mode": "marker",
+      "uri_check": "http://archive.org/wayback/available?url=https://parler.com/profile/{account}",
+      "uri_pretty": "https://web.archive.org/web/2/https://parler.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"archived_snapshots\": {\"closest\""
+    },
+    {
+      "name": "Pastebin",
+      "cat": "tech",
+      "uri_check": "https://pastebin.com/u/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user-view\"",
+      "mode": "marker"
+    },
+    {
+      "name": "patch",
+      "cat": "news",
+      "uri_check": "https://patch.com/users/{account}",
+      "e_code": 200,
+      "e_string": "<title>Patch User Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "PatientsLikeMe",
+      "cat": "health",
+      "uri_check": "https://www.patientslikeme.com/members/{account}",
+      "e_code": 200,
+      "e_string": "s profile | PatientsLikeMe</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Patreon",
+      "cat": "finance",
+      "uri_check": "https://www.patreon.com/{account}",
+      "e_code": 200,
+      "e_string": "full_name\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Patriots Win",
+      "cat": "political",
+      "uri_check": "https://patriots.win/api/v2/user/about.json?user={account}",
+      "uri_pretty": "https://patriots.win/u/{account}/",
+      "e_code": 200,
+      "e_string": "\"users\":[{",
+      "mode": "marker"
+    },
+    {
+      "name": "Patronite",
+      "cat": "finance",
+      "uri_check": "https://patronite.pl/{account}",
+      "e_code": 200,
+      "e_string": "Zostań Patronem",
+      "mode": "marker"
+    },
+    {
+      "name": "PayPal Business",
+      "cat": "finance",
+      "uri_check": "https://www.paypal.com/biz/profile-data/{account}",
+      "uri_pretty": "https://www.paypal.com/biz/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"payerId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "PayPal.Me",
+      "cat": "finance",
+      "uri_check": "https://www.paypal.com/paypalme/{account}",
+      "e_code": 200,
+      "e_string": "\"recipientSlugDetails\":",
+      "mode": "marker"
+    },
+    {
+      "name": "PCPartPicker",
+      "cat": "tech",
+      "uri_check": "https://pcpartpicker.com/user/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"active\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Peerlist",
+      "cat": "coding",
+      "uri_check": "https://peerlist.io/api/v1/users/profile/tldr?handle={account}",
+      "uri_pretty": "https://peerlist.io/{account}",
+      "e_code": 200,
+      "e_string": "\"tldr\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Peing",
+      "cat": "social",
+      "uri_check": "https://peing.net/en/{account}",
+      "e_code": 200,
+      "e_string": "data-route-user-id-main=''",
+      "mode": "marker"
+    },
+    {
+      "name": "Peoople (Creator)",
+      "cat": "social",
+      "uri_check": "https://peoople.app/en/creator/{account}/",
+      "e_code": 200,
+      "e_string": "\"@type\":\"BreadcrumbList\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Peoople (Influencer)",
+      "cat": "social",
+      "uri_check": "https://peoople.app/en/influencer/{account}/",
+      "e_code": 200,
+      "e_string": "\"@type\":\"BreadcrumbList\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Peoople (Star)",
+      "cat": "social",
+      "uri_check": "https://peoople.app/en/star/{account}/",
+      "e_code": 200,
+      "e_string": "\"@type\":\"BreadcrumbList\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Peoople (Unicorn)",
+      "cat": "social",
+      "uri_check": "https://peoople.app/en/unicorn/{account}/",
+      "e_code": 200,
+      "e_string": "\"@type\":\"BreadcrumbList\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Periscope",
+      "cat": "video",
+      "uri_check": "https://www.periscope.tv/{account}",
+      "e_code": 200,
+      "e_string": "<label>Followers",
+      "mode": "marker"
+    },
+    {
+      "name": "Pewex",
+      "cat": "misc",
+      "uri_check": "https://retro.pewex.pl/user/{account}",
+      "e_code": 200,
+      "e_string": "Zamieszcza eksponaty od:",
+      "mode": "marker"
+    },
+    {
+      "name": "Picsart",
+      "cat": "art",
+      "uri_check": "https://api.picsart.com/users/show/{account}.json",
+      "uri_pretty": "https://picsart.com/u/{account}",
+      "e_code": 200,
+      "e_string": "\"status\":\"success\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Piekielni",
+      "cat": "misc",
+      "uri_check": "https://piekielni.pl/user/{account}",
+      "e_code": 200,
+      "e_string": "Zamieszcza historie od:",
+      "mode": "marker"
+    },
+    {
+      "name": "Pikabu",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://pikabu.ru/@{account}"
+    },
+    {
+      "name": "Pillowfort",
+      "cat": "social",
+      "uri_check": "https://www.pillowfort.social/{account}/json/?p=1",
+      "uri_pretty": "https://www.pillowfort.social/{account}",
+      "e_code": 200,
+      "e_string": "\"posts\":",
+      "mode": "marker"
+    },
+    {
+      "name": "PinkBike",
+      "cat": "hobby",
+      "uri_check": "https://www.pinkbike.com/u/{account}/",
+      "e_code": 200,
+      "e_string": "on Pinkbike</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Pinterest",
+      "cat": "social",
+      "uri_check": "https://www.pinterest.com/{account}/",
+      "e_code": 200,
+      "e_string": " - Profile | Pinterest",
+      "mode": "marker"
+    },
+    {
+      "name": "pixelfed.social",
+      "cat": "social",
+      "uri_check": "https://pixelfed.social/{account}",
+      "e_code": 200,
+      "e_string": "- Pixelfed</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Planoly",
+      "cat": "misc",
+      "uri_check": "https://planoly.store/{account}",
+      "e_code": 200,
+      "e_string": "\"creatorLink\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "Playstation Network",
+      "cat": "gaming",
+      "uri_check": "https://psnprofiles.com/xhr/search/users?q={account}",
+      "uri_pretty": "https://psnprofiles.com/{account}",
+      "e_code": 200,
+      "e_string": "<div class=\"progress-bar small level\">",
+      "mode": "marker"
+    },
+    {
+      "name": "Plink",
+      "cat": "gaming",
+      "uri_check": "https://plink.gg/user/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user-page\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Plurk",
+      "cat": "social",
+      "uri_check": "https://www.plurk.com/{account}",
+      "e_code": 200,
+      "e_string": "Profile views",
+      "mode": "marker"
+    },
+    {
+      "name": "Poe.com",
+      "cat": "tech",
+      "uri_check": "https://poe.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"__isNode\":\"PoeUser\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Pokec",
+      "cat": "social",
+      "uri_check": "https://pokec.azet.sk/{account}",
+      "e_code": 200,
+      "e_string": "idReportedUser",
+      "mode": "marker"
+    },
+    {
+      "name": "pokemonshowdown",
+      "cat": "gaming",
+      "uri_check": "https://pokemonshowdown.com/users/{account}",
+      "e_code": 200,
+      "e_string": "Official ladder",
+      "mode": "marker"
+    },
+    {
+      "name": "Polarsteps",
+      "cat": "social",
+      "uri_check": "https://www.polarsteps.com/{account}",
+      "e_code": 200,
+      "e_string": "\"user-profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Polchat.pl",
+      "cat": "social",
+      "uri_check": "https://polczat.pl/forum/profile/{account}/",
+      "e_code": 200,
+      "e_string": "Historia wpisów",
+      "mode": "marker"
+    },
+    {
+      "name": "Poll Everywhere",
+      "cat": "tech",
+      "uri_check": "https://pollev.com/proxy/api/users/{account}",
+      "uri_pretty": "https://pollev.com/{account}",
+      "e_code": 200,
+      "e_string": "name",
+      "mode": "marker"
+    },
+    {
+      "name": "polygon",
+      "cat": "gaming",
+      "uri_check": "https://www.polygon.com/users/{account}",
+      "e_code": 200,
+      "e_string": "- Polygon",
+      "mode": "marker"
+    },
+    {
+      "name": "popl",
+      "cat": "business",
+      "uri_check": "https://poplme.co/{account}",
+      "e_code": 200,
+      "e_string": "MuiTypography-root MuiTypography-body1 css-kj7pvm",
+      "mode": "marker"
+    },
+    {
+      "name": "Pornhub (Model)",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.pornhub.com/model/{account}",
+      "e_code": 200,
+      "e_string": "class=\"topProfileHeader\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Pornhub (Pornstar)",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.pornhub.com/pornstar/{account}",
+      "e_code": 200,
+      "e_string": "class=\"topProfileHeader\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Pornhub (User)",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.pornhub.com/users/{account}",
+      "e_code": 200,
+      "e_string": "id=\"topProfileHeader\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Poshmark",
+      "cat": "shopping",
+      "uri_check": "https://poshmark.com/closet/{account}",
+      "e_code": 200,
+      "e_string": " is using Poshmark to sell items from their closet.",
+      "mode": "marker"
+    },
+    {
+      "name": "postcrossing",
+      "cat": "social",
+      "uri_check": "https://www.postcrossing.com/user/{account}",
+      "e_code": 200,
+      "e_string": ", from",
+      "mode": "marker"
+    },
+    {
+      "name": "Poweredbygay.social (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://poweredbygay.social/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://poweredbygay.social/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Pr0gramm",
+      "cat": "social",
+      "uri_check": "https://pr0gramm.com/api/profile/info?name={account}",
+      "uri_pretty": "https://pr0gramm.com/user/{account}",
+      "e_code": 200,
+      "e_string": "\"user\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Pravda.me",
+      "cat": "social",
+      "uri_check": "https://pravda.me/@{account}",
+      "e_code": 200,
+      "e_string": "Социальная сеть - Правда (by mastodon)</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Privacy Guides",
+      "cat": "tech",
+      "uri_check": "https://discuss.privacyguides.net/u/{account}.json",
+      "uri_pretty": "https://discuss.privacyguides.net/u/{account}/summary",
+      "e_code": 200,
+      "e_string": "\"user_badges\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Producthunt",
+      "cat": "business",
+      "uri_check": "https://www.producthunt.com/@{account}",
+      "e_code": 200,
+      "e_string": "s profile on Product Hunt",
+      "mode": "marker"
+    },
+    {
+      "name": "PromoDJ",
+      "cat": "music",
+      "mode": "profile",
+      "uri_check": "https://promodj.com/{account}"
+    },
+    {
+      "name": "Pronouns.page",
+      "cat": "social",
+      "uri_check": "https://pronouns.page/api/profile/get/{account}?version=2",
+      "uri_pretty": "https://pronouns.page/@{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Pronouny",
+      "cat": "social",
+      "uri_check": "https://pronouny.xyz/api/users/profile/username/{account}",
+      "uri_pretty": "https://pronouny.xyz/users/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Prose",
+      "cat": "blog",
+      "uri_check": "https://prose.astral.camp/{account}/",
+      "e_code": 200,
+      "e_string": "blog-title",
+      "mode": "marker"
+    },
+    {
+      "name": "prv.pl",
+      "cat": "tech",
+      "uri_check": "https://www.prv.pl/osoba/{account}",
+      "e_code": 200,
+      "e_string": "LOGIN",
+      "mode": "marker"
+    },
+    {
+      "name": "pypi",
+      "cat": "coding",
+      "uri_check": "https://pypi.org/user/{account}/",
+      "e_code": 200,
+      "e_string": "Profile of",
+      "mode": "marker"
+    },
+    {
+      "name": "QUEER PL",
+      "cat": "social",
+      "uri_check": "https://queer.pl/user/{account}",
+      "e_code": 200,
+      "e_string": " - Profile</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Quizlet",
+      "cat": "hobby",
+      "uri_check": "https://quizlet.com/webapi/3.2/users/check-username?username={account}",
+      "uri_pretty": "https://quizlet.com/user/{account}/sets",
+      "e_code": 200,
+      "e_string": "\"identifier\":\"username_is_taken\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Quora",
+      "cat": "social",
+      "uri_check": "https://www.quora.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "Credentials",
+      "mode": "marker"
+    },
+    {
+      "name": "Raddle.me",
+      "cat": "social",
+      "uri_check": "https://raddle.me/user/{account}",
+      "e_code": 200,
+      "e_string": "sidebar__title",
+      "mode": "marker"
+    },
+    {
+      "name": "Rant.li",
+      "cat": "blog",
+      "uri_check": "https://rant.li/{account}/",
+      "e_code": 200,
+      "e_string": "blog-title",
+      "mode": "marker"
+    },
+    {
+      "name": "Rarible",
+      "cat": "tech",
+      "uri_check": "https://rarible.com/marketplace/api/v4/urls/{account}",
+      "uri_pretty": "https://rarible.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "redbubble",
+      "cat": "shopping",
+      "uri_check": "https://www.redbubble.com/people/{account}/shop",
+      "e_code": 200,
+      "e_string": "Shop | Redbubble",
+      "mode": "marker"
+    },
+    {
+      "name": "Reddit",
+      "cat": "social",
+      "uri_check": "https://www.reddit.com/user/{account}/",
+      "e_code": 200,
+      "e_string": "aria-label=\"Profile information",
+      "mode": "marker"
+    },
+    {
+      "name": "RedGIFs",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://api.redgifs.com/v1/users/{account}",
+      "uri_pretty": "https://www.redgifs.com/users/{account}",
+      "e_code": 200,
+      "e_string": "\"name\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Refsheet",
+      "cat": "hobby",
+      "uri_check": "https://refsheet.net/{account}",
+      "e_code": 200,
+      "e_string": "og:title",
+      "mode": "marker"
+    },
+    {
+      "name": "Replit",
+      "cat": "coding",
+      "uri_check": "https://replit.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"__typename\":\"User\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Researchgate",
+      "cat": "hobby",
+      "uri_check": "https://www.researchgate.net/profile/{account}",
+      "e_code": 200,
+      "e_string": " | ",
+      "mode": "marker"
+    },
+    {
+      "name": "resumes_actorsaccess",
+      "cat": "social",
+      "uri_check": "https://resumes.actorsaccess.com/{account}",
+      "e_code": 200,
+      "e_string": "- Resume | Actors Access</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Revolut",
+      "cat": "finance",
+      "uri_check": "https://revolut.me/api/web-profile/{account}",
+      "uri_pretty": "https://revolut.me/{account}",
+      "e_code": 200,
+      "e_string": "\"firstName\"",
+      "mode": "marker"
+    },
+    {
+      "name": "risk.ru",
+      "cat": "hobby",
+      "uri_check": "https://risk.ru/people/{account}",
+      "e_code": 200,
+      "e_string": "— Люди — Risk.ru",
+      "mode": "marker"
+    },
+    {
+      "name": "Roberts Space Industries",
+      "cat": "gaming",
+      "uri_check": "https://robertsspaceindustries.com/community-hub/user/{account}",
+      "e_code": 200,
+      "e_string": "Query\",\"creator",
+      "mode": "marker"
+    },
+    {
+      "name": "Roblox",
+      "cat": "gaming",
+      "uri_check": "https://auth.roblox.com/v1/usernames/validate?username={account}&birthday=2019-12-31T23:00:00.000Z",
+      "uri_pretty": "https://www.roblox.com/search/users?keyword={account}",
+      "e_code": 200,
+      "e_string": "Username is already in use",
+      "mode": "marker"
+    },
+    {
+      "name": "RoutineHub",
+      "cat": "social",
+      "uri_check": "https://routinehub.co/user/{account}",
+      "e_code": 200,
+      "e_string": "Downloads: ",
+      "mode": "marker"
+    },
+    {
+      "name": "ru_123rf",
+      "cat": "hobby",
+      "uri_check": "https://ru.123rf.com/profile_{account}",
+      "e_code": 200,
+      "e_string": "userID",
+      "mode": "marker"
+    },
+    {
+      "name": "RubyGems.org",
+      "cat": "coding",
+      "uri_check": "https://rubygems.org/api/v1/profiles/{account}.json",
+      "uri_pretty": "https://rubygems.org/profiles/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "RumbleChannel",
+      "cat": "political",
+      "uri_check": "https://rumble.com/c/{account}",
+      "e_code": 200,
+      "e_string": "href=https://rumble.com/c/",
+      "mode": "marker"
+    },
+    {
+      "name": "RumbleUser",
+      "cat": "political",
+      "uri_check": "https://rumble.com/user/{account}",
+      "e_code": 200,
+      "e_string": "href=https://rumble.com/user/",
+      "mode": "marker"
+    },
+    {
+      "name": "RuneScape",
+      "cat": "hobby",
+      "uri_check": "https://apps.runescape.com/runemetrics/profile/profile?user={account}",
+      "uri_pretty": "https://apps.runescape.com/runemetrics/app/overview/player/{account}",
+      "e_code": 200,
+      "e_string": "\"name\":",
+      "mode": "marker"
+    },
+    {
+      "name": "RuTracker.org",
+      "cat": "misc",
+      "uri_check": "https://rutracker.org/forum/profile.php?mode=viewprofile&u={account}",
+      "e_code": 200,
+      "e_string": "Профиль пользователя",
+      "mode": "marker"
+    },
+    {
+      "name": "ruVoIP.net",
+      "cat": "tech",
+      "uri_check": "https://ruvoip.net/members/{account}/",
+      "e_code": 200,
+      "e_string": "id=\"user-xprofile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Salon24",
+      "cat": "blog",
+      "uri_check": "https://www.salon24.pl/u/{account}/",
+      "e_code": 200,
+      "e_string": "<span>Obserwujących</span>",
+      "mode": "marker"
+    },
+    {
+      "name": "Scammer.info",
+      "cat": "misc",
+      "uri_check": "https://scammer.info/u/{account}.json",
+      "uri_pretty": "https://scammer.info/u/{account}",
+      "e_code": 200,
+      "e_string": "avatar_template",
+      "mode": "marker"
+    },
+    {
+      "name": "Scored",
+      "cat": "social",
+      "uri_check": "https://scored.co/api/v2/user/about.json?user={account}",
+      "uri_pretty": "https://scored.co/u/{account}",
+      "e_code": 200,
+      "e_string": "\"status\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "ScoutWiki",
+      "cat": "social",
+      "uri_check": "https://en.scoutwiki.org/User:{account}",
+      "e_code": 200,
+      "e_string": "NewPP limit report",
+      "mode": "marker"
+    },
+    {
+      "name": "Scratch",
+      "cat": "coding",
+      "mode": "profile",
+      "uri_check": "https://scratch.mit.edu/users/{account}/"
+    },
+    {
+      "name": "Scribd (Document)",
+      "cat": "hobby",
+      "uri_check": "https://www.scribd.com/search/query?query={account}&verbatim=true",
+      "uri_pretty": "https://www.scribd.com/search?query={account}&verbatim=true",
+      "e_code": 200,
+      "e_string": "\"compilationId\":\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Searchengines",
+      "cat": "hobby",
+      "uri_check": "https://searchengines.guru/ru/search?keyword=&author={account}&sortByDate=true",
+      "e_code": 200,
+      "e_string": "class=\"search-result__item\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Seneporno",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://seneporno.com/user/{account}",
+      "e_code": 200,
+      "e_string": "Dernier Login",
+      "mode": "marker"
+    },
+    {
+      "name": "sentimente",
+      "cat": "dating",
+      "uri_check": "https://www.sentimente.com/amp/{account}.html",
+      "e_code": 200,
+      "e_string": "Chat online with",
+      "mode": "marker"
+    },
+    {
+      "name": "SEOClerks",
+      "cat": "social",
+      "uri_check": "https://www.seoclerks.com/user/{account}",
+      "e_code": 200,
+      "e_string": "<div class=\"user-info container\">",
+      "mode": "marker"
+    },
+    {
+      "name": "Sepia Search (PeerTube)",
+      "cat": "video",
+      "uri_check": "https://sepiasearch.org/api/v1/search/video-channels?search=%22{account}%22&start=0&count=10",
+      "uri_pretty": "https://sepiasearch.org/search?search=%22{account}%22&page=1&resultType=channels",
+      "e_code": 200,
+      "e_string": "\"data\":[{",
+      "mode": "marker"
+    },
+    {
+      "name": "setlist.fm",
+      "cat": "music",
+      "uri_check": "https://www.setlist.fm/user/{account}",
+      "e_code": 200,
+      "e_string": "s setlist.fm | setlist.fm</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "SFD",
+      "cat": "health",
+      "uri_check": "https://www.sfd.pl/profile/{account}",
+      "e_code": 200,
+      "e_string": "Tematy użytkownika",
+      "mode": "marker"
+    },
+    {
+      "name": "Shesfreaky",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.shesfreaky.com/profile/{account}/",
+      "e_code": 200,
+      "e_string": "s Profile - ShesFreaky</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Shikimori",
+      "cat": "social",
+      "uri_check": "https://shikimori.io/{account}",
+      "e_code": 200,
+      "e_string": "class=\"profile-head\"",
+      "mode": "marker"
+    },
+    {
+      "name": "shopify",
+      "cat": "shopping",
+      "uri_check": "https://{account}.myshopify.com",
+      "e_code": 200,
+      "e_string": "home",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Showup.tv",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://showup.tv/profile/{account}",
+      "e_code": 200,
+      "e_string": "O mnie",
+      "mode": "marker"
+    },
+    {
+      "name": "shutterstock",
+      "cat": "images",
+      "uri_check": "https://www.shutterstock.com/g/{account}",
+      "e_code": 200,
+      "e_string": "| Shutterstock",
+      "mode": "marker"
+    },
+    {
+      "name": "SimplePlanes",
+      "cat": "gaming",
+      "uri_check": "https://www.simpleplanes.com/u/{account}",
+      "e_code": 200,
+      "e_string": "<h5>joined",
+      "mode": "marker"
+    },
+    {
+      "name": "skeb",
+      "cat": "art",
+      "uri_check": "https://skeb.jp/@{account}",
+      "e_code": 200,
+      "e_string": ") | Skeb",
+      "mode": "marker"
+    },
+    {
+      "name": "SlackHoles",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://slackholes.com/actor/{account}/",
+      "e_code": 200,
+      "e_string": "Pussy and Ass Sizes",
+      "mode": "marker"
+    },
+    {
+      "name": "Slant",
+      "cat": "shopping",
+      "uri_check": "https://www.slant.co/users/{account}?format=jsonp&callback=jsonLoaded",
+      "uri_pretty": "https://www.slant.co/users/{account}",
+      "e_code": 200,
+      "e_string": "\"uuid\":",
+      "mode": "marker"
+    },
+    {
+      "name": "slides",
+      "cat": "social",
+      "uri_check": "https://slides.com/{account}",
+      "e_code": 200,
+      "e_string": "Presentations by",
+      "mode": "marker"
+    },
+    {
+      "name": "Slideshare",
+      "cat": "social",
+      "uri_check": "https://www.slideshare.net/{account}",
+      "e_code": 200,
+      "e_string": "data-testid=\"report-button\"",
+      "mode": "marker"
+    },
+    {
+      "name": "SmashRun",
+      "cat": "health",
+      "uri_check": "https://smashrun.com/{account}/",
+      "e_code": 200,
+      "e_string": "Miles run overall",
+      "mode": "marker"
+    },
+    {
+      "name": "SmugMug",
+      "cat": "images",
+      "uri_check": "https://{account}.smugmug.com",
+      "e_code": 200,
+      "e_string": "schema.org/Person",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "smule",
+      "cat": "music",
+      "uri_check": "https://www.smule.com/api/profile/?handle={account}",
+      "uri_pretty": "https://www.smule.com/{account}",
+      "e_code": 200,
+      "e_string": "account_id",
+      "mode": "marker"
+    },
+    {
+      "name": "Snapchat",
+      "cat": "social",
+      "uri_check": "https://www.snapchat.com/@{account}",
+      "e_code": 200,
+      "e_string": "is on Snapchat!",
+      "mode": "marker"
+    },
+    {
+      "name": "soc.citizen4.eu",
+      "cat": "social",
+      "uri_check": "https://soc.citizen4.eu/profile/{account}/profile",
+      "e_code": 200,
+      "e_string": "@soc.citizen4.eu",
+      "mode": "marker"
+    },
+    {
+      "name": "social.bund.de",
+      "cat": "social",
+      "uri_check": "https://social.bund.de/@{account}",
+      "e_code": 200,
+      "e_string": "@social.bund.de) - social.bund.de</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "sofurry",
+      "cat": "art",
+      "uri_check": "https://{account}.sofurry.com",
+      "e_code": 200,
+      "e_string": "'s Profile | SoFurry",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "solo.to",
+      "cat": "social",
+      "uri_check": "https://solo.to/{account}",
+      "e_code": 200,
+      "e_string": "create your own page",
+      "mode": "marker"
+    },
+    {
+      "name": "SoundCloud",
+      "cat": "music",
+      "uri_check": "https://soundcloud.com/{account}",
+      "e_code": 200,
+      "e_string": "\"hydratable\":\"user\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Soup",
+      "cat": "blog",
+      "uri_check": "https://www.soup.io/author/{account}",
+      "e_code": 200,
+      "e_string": "Author at Soup.io",
+      "mode": "marker"
+    },
+    {
+      "name": "Sourceforge",
+      "cat": "coding",
+      "uri_check": "https://sourceforge.net/rest/u/{account}/profile",
+      "uri_pretty": "https://sourceforge.net/u/{account}/profile",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Speaker Deck",
+      "cat": "social",
+      "uri_check": "https://speakerdeck.com/{account}/",
+      "e_code": 200,
+      "e_string": ") on Speaker Deck</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "speedrun",
+      "cat": "gaming",
+      "uri_check": "https://www.speedrun.com/user/{account}/",
+      "e_code": 200,
+      "e_string": "Runs - ",
+      "mode": "marker"
+    },
+    {
+      "name": "SPOJ",
+      "cat": "coding",
+      "uri_check": "https://www.spoj.com/users/{account}/",
+      "e_code": 200,
+      "e_string": "<h3>Activity over the last year</h3>",
+      "mode": "marker"
+    },
+    {
+      "name": "sporcle",
+      "cat": "gaming",
+      "uri_check": "https://www.sporcle.com/user/{account}/people/",
+      "e_code": 200,
+      "e_string": "'s Sporcle Friends",
+      "mode": "marker"
+    },
+    {
+      "name": "Sports Tracker",
+      "cat": "health",
+      "uri_check": "https://api.sports-tracker.com/apiserver/v1/user/name/{account}",
+      "uri_pretty": "https://sports-tracker.com/view_profile/{account}",
+      "e_code": 200,
+      "e_string": "\"uuid\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Spotify",
+      "cat": "music",
+      "uri_check": "https://open.spotify.com/user/{account}",
+      "e_code": 200,
+      "e_string": "content=\"profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "StackOverflow",
+      "cat": "coding",
+      "uri_check": "https://api.stackexchange.com/2.3/users?order=desc&sort=name&inname={account}&site=stackoverflow",
+      "uri_pretty": "https://stackoverflow.com/users/filter?search={account}",
+      "e_code": 200,
+      "e_string": "\"items\":[{",
+      "mode": "marker"
+    },
+    {
+      "name": "StackShare",
+      "cat": "tech",
+      "uri_check": "https://stackshare.io/{account}",
+      "e_code": 200,
+      "e_string": "\\\"userProfile\\\":",
+      "mode": "marker"
+    },
+    {
+      "name": "stats.fm",
+      "cat": "music",
+      "uri_check": "https://api.stats.fm/api/v1/users/{account}",
+      "uri_pretty": "https://stats.fm/{account}",
+      "e_code": 200,
+      "e_string": "\"item\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "Statuspage",
+      "cat": "tech",
+      "uri_check": "https://{account}.statuspage.io/api/v2/status.json",
+      "uri_pretty": "https://{account}.statuspage.io/",
+      "e_code": 200,
+      "e_string": "updated_at",
+      "mode": "marker"
+    },
+    {
+      "name": "Steam",
+      "cat": "gaming",
+      "uri_check": "https://steamcommunity.com/id/{account}",
+      "e_code": 200,
+      "e_string": "g_rgProfileData =",
+      "mode": "marker"
+    },
+    {
+      "name": "SteamGifts",
+      "cat": "gaming",
+      "uri_check": "https://www.steamgifts.com/user/{account}",
+      "e_code": 200,
+      "e_string": "\"identifier\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Steemit",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://steemit.com/@{account}"
+    },
+    {
+      "name": "steller",
+      "cat": "shopping",
+      "uri_check": "https://steller.co/{account}",
+      "e_code": 200,
+      "e_string": " on Steller</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "StoryCorps",
+      "cat": "blog",
+      "uri_check": "https://archive.storycorps.org/user/{account}/",
+      "e_code": 200,
+      "e_string": "archive author",
+      "mode": "marker"
+    },
+    {
+      "name": "Strava",
+      "cat": "social",
+      "uri_check": "https://www.strava.com/athletes/{account}",
+      "e_code": 301,
+      "e_string": "/athletes/",
+      "mode": "marker"
+    },
+    {
+      "name": "StreamElements",
+      "cat": "finance",
+      "uri_check": "https://api.streamelements.com/kappa/v2/channels/{account}",
+      "uri_pretty": "https://streamelements.com/{account}",
+      "e_code": 200,
+      "e_string": "\"providerId\"",
+      "mode": "marker"
+    },
+    {
+      "name": "StreamLabs",
+      "cat": "finance",
+      "uri_check": "https://streamlabs.com/api/v6/user/{account}",
+      "uri_pretty": "https://streamlabs.com/{account}/tip",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Stripchat",
+      "cat": "xx NSFW xx",
+      "mode": "profile",
+      "uri_check": "https://stripchat.com/{account}",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Subscribestar",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://subscribestar.adult/{account}",
+      "e_code": 200,
+      "e_string": "CREATOR STATS",
+      "mode": "marker"
+    },
+    {
+      "name": "Substack",
+      "cat": "social",
+      "uri_check": "https://substack.com/api/v1/user/{account}/public_profile",
+      "uri_pretty": "https://substack.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "sukebei.nyaa.si",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://sukebei.nyaa.si/user/{account}",
+      "e_code": 200,
+      "e_string": "'s torrents",
+      "mode": "marker"
+    },
+    {
+      "name": "Suzuri",
+      "cat": "business",
+      "uri_check": "https://suzuri.jp/{account}",
+      "e_code": 200,
+      "e_string": "Items",
+      "mode": "marker"
+    },
+    {
+      "name": "szmer.info",
+      "cat": "social",
+      "uri_check": "https://szmer.info/u/{account}",
+      "e_code": 200,
+      "e_string": "Joined",
+      "mode": "marker"
+    },
+    {
+      "name": "tabletoptournament",
+      "cat": "misc",
+      "uri_check": "https://www.tabletoptournaments.net/eu/player/{account}",
+      "e_code": 200,
+      "e_string": "- Player Profile | T³ - TableTop Tournaments",
+      "mode": "marker"
+    },
+    {
+      "name": "TamTam",
+      "cat": "social",
+      "uri_check": "https://tamtam.chat/{account}",
+      "e_code": 200,
+      "e_string": "deeplink=tamtam://chat/",
+      "mode": "marker"
+    },
+    {
+      "name": "Tanuki.pl",
+      "cat": "hobby",
+      "uri_check": "https://tanuki.pl/profil/{account}",
+      "e_code": 200,
+      "e_string": "Dołączył",
+      "mode": "marker"
+    },
+    {
+      "name": "TAPiTAG",
+      "cat": "business",
+      "uri_check": "https://account.tapitag.co/tapitag/api/v1/{account}",
+      "uri_pretty": "https://account.tapitag.co/{account}",
+      "e_code": 200,
+      "e_string": "User details are Showing",
+      "mode": "marker"
+    },
+    {
+      "name": "Tappy",
+      "cat": "business",
+      "uri_check": "https://api.tappy.tech/api/profile/username/{account}",
+      "uri_pretty": "https://www.tappy.tech/{account}",
+      "e_code": 200,
+      "e_string": "user_id",
+      "mode": "marker"
+    },
+    {
+      "name": "Taringa",
+      "cat": "social",
+      "uri_check": "https://www.taringa.net/{account}",
+      "e_code": 200,
+      "e_string": " en Taringa!</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Taringa Archived Profile",
+      "cat": "archived",
+      "mode": "marker",
+      "uri_check": "https://archive.org/wayback/available?url=https://www.taringa.net/{account}",
+      "uri_pretty": "https://web.archive.org/web/2/taringa.net/{account}",
+      "e_code": 200,
+      "e_string": "\"archived_snapshots\": {\"closest\""
+    },
+    {
+      "name": "taskrabbit",
+      "cat": "business",
+      "uri_check": "https://www.taskrabbit.com/profile/{account}/about",
+      "e_code": 200,
+      "e_string": "’s Profile",
+      "mode": "marker"
+    },
+    {
+      "name": "Teamtreehouse",
+      "cat": "coding",
+      "uri_check": "https://teamtreehouse.com/{account}",
+      "e_code": 200,
+      "e_string": "Member Since",
+      "mode": "marker"
+    },
+    {
+      "name": "Teespring",
+      "cat": "business",
+      "uri_check": "https://commerce.teespring.com/v1/stores?slug={account}",
+      "uri_pretty": "https://{account}.creator-spring.com",
+      "e_code": 200,
+      "e_string": "sellerToken",
+      "mode": "marker"
+    },
+    {
+      "name": "Teknik",
+      "cat": "tech",
+      "uri_check": "https://user.teknik.io/{account}",
+      "e_code": 200,
+      "e_string": "Public Key",
+      "mode": "marker"
+    },
+    {
+      "name": "Telegram",
+      "cat": "social",
+      "uri_check": "https://t.me/{account}",
+      "e_code": 200,
+      "e_string": "tgme_page_title",
+      "mode": "marker"
+    },
+    {
+      "name": "Teletype",
+      "cat": "blog",
+      "uri_check": "https://teletype.in/@{account}",
+      "e_code": 200,
+      "e_string": "class=\"layout__content m_main blog\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Tellonym",
+      "cat": "social",
+      "uri_check": "https://api.tellonym.me/profiles/name/{account}",
+      "uri_pretty": "https://tellonym.me/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Tenor",
+      "cat": "images",
+      "uri_check": "https://tenor.com/users/{account}",
+      "e_code": 200,
+      "e_string": "class=\"ProfilePage page\"",
+      "mode": "marker"
+    },
+    {
+      "name": "TETR.IO",
+      "cat": "gaming",
+      "uri_check": "https://ch.tetr.io/api/users/{account}",
+      "uri_pretty": "https://ch.tetr.io/u/{account}",
+      "e_code": 200,
+      "e_string": "\"success\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "TF2 Backpack Examiner",
+      "cat": "gaming",
+      "uri_check": "https://www.tf2items.com/id/{account}",
+      "e_code": 200,
+      "e_string": "var profileId",
+      "mode": "marker"
+    },
+    {
+      "name": "The Gateway Pundit",
+      "cat": "political",
+      "uri_check": "https://www.thegatewaypundit.com/author/{account}/",
+      "e_code": 200,
+      "e_string": "meta property=\"og:type\" content=\"profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "theguardian",
+      "cat": "news",
+      "uri_check": "https://www.theguardian.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "content=\"&#x3C;p&#x3E;",
+      "mode": "marker"
+    },
+    {
+      "name": "themeforest",
+      "cat": "art",
+      "uri_check": "https://themeforest.net/user/{account}",
+      "e_code": 200,
+      "e_string": "s profile on ThemeForest",
+      "mode": "marker"
+    },
+    {
+      "name": "Thetattooforum",
+      "cat": "art",
+      "uri_check": "https://www.thetattooforum.com/members/{account}/",
+      "e_code": 200,
+      "e_string": "Insert This Gallery",
+      "mode": "marker"
+    },
+    {
+      "name": "thoughts",
+      "cat": "hobby",
+      "uri_check": "https://thoughts.com/members/{account}/",
+      "e_code": 200,
+      "e_string": "<span class=\"activity",
+      "mode": "marker"
+    },
+    {
+      "name": "Threads",
+      "cat": "social",
+      "uri_check": "https://www.threads.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "TikTok",
+      "cat": "social",
+      "uri_check": "https://www.tiktok.com/oembed?url=https://www.tiktok.com/@{account}",
+      "uri_pretty": "https://www.tiktok.com/@{account}?lang=en",
+      "e_code": 200,
+      "e_string": "\"author_url\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Tilde.zone (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://tilde.zone/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://tilde.zone/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Tinder",
+      "cat": "dating",
+      "uri_check": "https://tinder.com/@{account}",
+      "e_code": 200,
+      "e_string": ") | Tinder</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Tindie",
+      "cat": "shopping",
+      "mode": "profile",
+      "uri_check": "https://www.tindie.com/stores/{account}/"
+    },
+    {
+      "name": "TipeeeStream",
+      "cat": "finance",
+      "uri_check": "https://www.tipeeestream.com/v3.0/pages/{account}",
+      "uri_pretty": "https://www.tipeeestream.com/{account}/",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Tooting.ch (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://tooting.ch/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://tooting.ch/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Topcoder",
+      "cat": "coding",
+      "uri_check": "https://api.topcoder.com/v5/members/{account}",
+      "uri_pretty": "https://profiles.topcoder.com/{account}",
+      "e_code": 200,
+      "e_string": "\"userId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "toyhou.se",
+      "cat": "hobby",
+      "uri_check": "https://toyhou.se/{account}",
+      "e_code": 200,
+      "e_string": "display-user",
+      "mode": "marker"
+    },
+    {
+      "name": "TradingView",
+      "cat": "finance",
+      "uri_check": "https://www.tradingview.com/u/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"js-user-profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "trakt",
+      "cat": "video",
+      "uri_check": "https://trakt.tv/users/{account}",
+      "e_code": 200,
+      "e_string": "s profile - Trakt",
+      "mode": "marker"
+    },
+    {
+      "name": "TRAKTRAIN",
+      "cat": "music",
+      "uri_check": "https://traktrain.com/{account}",
+      "e_code": 200,
+      "e_string": "id=\"userId\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Trello",
+      "cat": "social",
+      "uri_check": "https://trello.com/1/Members/{account}",
+      "uri_pretty": "https://trello.com/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "tripadvisor",
+      "cat": "social",
+      "uri_check": "https://www.tripadvisor.com/Profile/{account}",
+      "e_code": 200,
+      "e_string": "Contributions",
+      "mode": "marker"
+    },
+    {
+      "name": "TruckersMP",
+      "cat": "gaming",
+      "uri_check": "https://truckersmp.com/user/search?search={account}",
+      "e_code": 200,
+      "e_string": "class=\"team-v2\"",
+      "mode": "marker"
+    },
+    {
+      "name": "TruckersMP.Ru",
+      "cat": "gaming",
+      "uri_check": "https://truckersmp.ru/{account}",
+      "e_code": 200,
+      "e_string": "class=\"b-user-page\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Truth Social",
+      "cat": "social",
+      "uri_check": "https://truthsocial.com/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://truthsocial.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "TryHackMe",
+      "cat": "tech",
+      "uri_check": "https://tryhackme.com/api/user/exist/{account}",
+      "uri_pretty": "https://tryhackme.com/r/p/{account}",
+      "e_code": 200,
+      "e_string": "\"success\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "Tryst",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://tryst.link/escort/{account}",
+      "e_code": 200,
+      "e_string": "Caters to</div>",
+      "mode": "marker"
+    },
+    {
+      "name": "tumblr",
+      "cat": "images",
+      "uri_check": "https://www.tumblr.com/{account}",
+      "e_code": 200,
+      "e_string": "\"queryKey\":[\"user-info",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "tunefind",
+      "cat": "music",
+      "uri_check": "https://www.tunefind.com/api-request/account/profile?userName={account}",
+      "uri_pretty": "https://www.tunefind.com/user/profile/{account}",
+      "e_code": 200,
+      "e_string": "\"user-stats-engagement\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Tweetapus",
+      "cat": "social",
+      "uri_check": "https://tweetapus.tiag.workers.dev/@{account}.json",
+      "uri_pretty": "https://tweeta.tiago.zip/@{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Twitcast",
+      "cat": "social",
+      "uri_check": "https://frontendapi.twitcasting.tv/users/{account}",
+      "uri_pretty": "https://twitcasting.tv/{account}",
+      "e_code": 200,
+      "e_string": "\"user\":{",
+      "mode": "marker"
+    },
+    {
+      "name": "Twitch",
+      "cat": "gaming",
+      "uri_check": "https://twitchtracker.com/{account}",
+      "uri_pretty": "https://twitch.tv/{account}/",
+      "e_code": 200,
+      "e_string": "Overview</a>",
+      "mode": "marker"
+    },
+    {
+      "name": "Twitter archived profile",
+      "cat": "archived",
+      "mode": "marker",
+      "uri_check": "http://archive.org/wayback/available?url=https://twitter.com/{account}",
+      "uri_pretty": "https://web.archive.org/web/2/https://twitter.com/{account}",
+      "e_code": 200,
+      "e_string": "\"archived_snapshots\": {\"closest\""
+    },
+    {
+      "name": "Twitter archived tweets",
+      "cat": "archived",
+      "mode": "marker",
+      "uri_check": "http://archive.org/wayback/available?url=https://twitter.com/{account}/status/*",
+      "uri_pretty": "https://web.archive.org/web/*/https://twitter.com/{account}/status/*",
+      "e_code": 200,
+      "e_string": "\"archived_snapshots\": {\"closest\""
+    },
+    {
+      "name": "twoplustwo",
+      "cat": "hobby",
+      "mode": "unavailable"
+    },
+    {
+      "name": "twpro",
+      "cat": "social",
+      "uri_check": "https://twpro.jp/{account}/q-data.json",
+      "uri_pretty": "https://twpro.jp/{account}",
+      "e_code": 200,
+      "e_string": ",200,\"/",
+      "mode": "marker"
+    },
+    {
+      "name": "Udemy",
+      "cat": "tech",
+      "uri_check": "https://www.udemy.com/user/{account}/",
+      "e_code": 200,
+      "e_string": "| Udemy</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "UEF CONNECT",
+      "cat": "business",
+      "uri_check": "https://uefconnect.uef.fi/en/{account}/",
+      "e_code": 200,
+      "e_string": "profile-page-header__info",
+      "mode": "marker"
+    },
+    {
+      "name": "Ultimate Guitar",
+      "cat": "hobby",
+      "uri_check": "https://www.ultimate-guitar.com/u/{account}",
+      "e_code": 200,
+      "e_string": " | Ultimate-Guitar.Com</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Ultras Diary",
+      "cat": "hobby",
+      "uri_check": "http://ultrasdiary.pl/u/{account}/",
+      "e_code": 200,
+      "e_string": "Mecze wyjazdowe:",
+      "mode": "marker"
+    },
+    {
+      "name": "Unlisted Videos",
+      "cat": "archived",
+      "uri_check": "https://unlistedvideos.com/search.php?user={account}",
+      "e_code": 200,
+      "e_string": "Date submitted",
+      "mode": "marker"
+    },
+    {
+      "name": "unsplash",
+      "cat": "images",
+      "uri_check": "https://unsplash.com/@{account}",
+      "e_code": 200,
+      "e_string": "| Unsplash Photo Community",
+      "mode": "marker"
+    },
+    {
+      "name": "Untappd",
+      "cat": "social",
+      "uri_check": "https://untappd.com/user/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"cont user_profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "USA Life",
+      "cat": "social",
+      "uri_check": "https://usa.life/{account}",
+      "e_code": 200,
+      "e_string": "Please log in to like, share and comment",
+      "mode": "marker"
+    },
+    {
+      "name": "utip.io",
+      "cat": "finance",
+      "uri_check": "https://utip.io/creator/profile/{account}",
+      "uri_pretty": "https://utip.io/{account}",
+      "e_code": 200,
+      "e_string": "\"userName\"",
+      "mode": "marker"
+    },
+    {
+      "name": "uwu.ai",
+      "cat": "social",
+      "uri_check": "https://{account}.uwu.ai/",
+      "e_code": 200,
+      "e_string": "property=\"twitter:card\"",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Uwumarket",
+      "cat": "business",
+      "uri_check": "https://uwumarket.us/collections/{account}",
+      "e_code": 200,
+      "e_string": "data-collection-filters",
+      "mode": "marker"
+    },
+    {
+      "name": "vapenews",
+      "cat": "hobby",
+      "uri_check": "https://vapenews.ru/profile/{account}",
+      "e_code": 200,
+      "e_string": "<title inertia>Профиль</title></head>",
+      "mode": "marker"
+    },
+    {
+      "name": "Venmo",
+      "cat": "finance",
+      "uri_check": "https://account.venmo.com/u/{account}",
+      "e_code": 200,
+      "e_string": "profileInfo_username__",
+      "mode": "marker"
+    },
+    {
+      "name": "Vero",
+      "cat": "art",
+      "uri_check": "https://vero.co/{account}",
+      "e_code": 200,
+      "e_string": "name=\"username",
+      "mode": "marker"
+    },
+    {
+      "name": "vibilagare",
+      "cat": "misc",
+      "uri_check": "https://www.vibilagare.se/users/{account}",
+      "e_code": 200,
+      "e_string": "class=\"user-profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "VIEWBUG",
+      "cat": "hobby",
+      "uri_check": "https://www.viewbug.com/member/{account}",
+      "e_code": 200,
+      "e_string": "class=\"top-profile-membership\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Vimeo",
+      "cat": "video",
+      "uri_check": "https://vimeo.com/{account}",
+      "e_code": 200,
+      "e_string": "og:type",
+      "mode": "marker"
+    },
+    {
+      "name": "Vine",
+      "cat": "video",
+      "uri_check": "https://vine.co/api/users/profiles/vanity/{account}",
+      "uri_pretty": "https://vine.co/{account}",
+      "e_code": 200,
+      "e_string": "userId",
+      "mode": "marker"
+    },
+    {
+      "name": "VIP-blog",
+      "cat": "blog",
+      "uri_check": "https://{account}.vip-blog.com/",
+      "e_code": 200,
+      "e_string": "blog : ",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "VirusTotal",
+      "cat": "misc",
+      "uri_check": "https://www.virustotal.com/ui/users/{account}",
+      "uri_pretty": "https://www.virustotal.com/gui/user/{account}",
+      "e_code": 200,
+      "e_string": "\"data\"",
+      "mode": "marker",
+      "headers": {
+        "Accept-Language": "en-US"
+      }
+    },
+    {
+      "name": "visnesscard",
+      "cat": "business",
+      "uri_check": "https://my.visnesscard.com/Home/GetCard/{account}",
+      "uri_pretty": "https://my.visnesscard.com/{account}",
+      "e_code": 200,
+      "e_string": "end_point",
+      "mode": "marker"
+    },
+    {
+      "name": "Vivino",
+      "cat": "shopping",
+      "uri_check": "https://api.vivino.com/users/{account}",
+      "uri_pretty": "https://www.vivino.com/users/{account}",
+      "e_code": 200,
+      "e_string": "\"id\":",
+      "mode": "marker"
+    },
+    {
+      "name": "VK",
+      "cat": "social",
+      "uri_check": "https://vk.com/{account}",
+      "e_code": 200,
+      "e_string": "content=\"profile\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Vkl.world (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://vkl.world/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://vkl.world/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Vmst.io (Mastodon Instance)",
+      "cat": "social",
+      "uri_check": "https://vmst.io/api/v1/accounts/lookup?acct={account}",
+      "uri_pretty": "https://vmst.io/@{account}",
+      "e_code": 200,
+      "e_string": "display_name",
+      "mode": "marker"
+    },
+    {
+      "name": "Voice123",
+      "cat": "hobby",
+      "uri_check": "https://voice123.com/api/providers/search/{account}",
+      "uri_pretty": "https://voice123.com/{account}",
+      "e_code": 200,
+      "e_string": "user_id",
+      "mode": "marker"
+    },
+    {
+      "name": "Voices.com",
+      "cat": "business",
+      "uri_check": "https://www.voices.com/profile/{account}/",
+      "e_code": 200,
+      "e_string": "Last Online</h3>",
+      "mode": "marker"
+    },
+    {
+      "name": "vsco",
+      "cat": "social",
+      "uri_check": "https://vsco.co/{account}/gallery",
+      "e_code": 200,
+      "e_string": "permaSubdomain",
+      "mode": "marker"
+    },
+    {
+      "name": "VseTop",
+      "cat": "tech",
+      "uri_check": "https://vsetop.org/user/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"userinfo\"",
+      "mode": "marker"
+    },
+    {
+      "name": "W3Schools",
+      "cat": "tech",
+      "uri_check": "https://pathfinder-api.kai.w3spaces.com/public-profile-api/{account}",
+      "e_code": 200,
+      "e_string": "\"createdAt\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Wakatime",
+      "cat": "coding",
+      "uri_check": "https://wakatime.com/api/v1/users/{account}",
+      "uri_pretty": "https://wakatime.com/@{account}",
+      "e_code": 200,
+      "e_string": "\"data\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Warmerise",
+      "cat": "gaming",
+      "uri_check": "https://warmerise.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "<div id='profile_photo",
+      "mode": "marker"
+    },
+    {
+      "name": "warriorforum",
+      "cat": "hobby",
+      "uri_check": "https://www.warriorforum.com/members/{account}.html",
+      "e_code": 200,
+      "e_string": "Last Activity:",
+      "mode": "marker"
+    },
+    {
+      "name": "WatchMeMore",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://watchmemore.com/{account}/",
+      "e_code": 200,
+      "e_string": "\"dateCreated\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Watchmyfeed",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://watchmyfeed.com/{account}",
+      "e_code": 200,
+      "e_string": "SEND ME A TIP",
+      "mode": "marker"
+    },
+    {
+      "name": "Wattpad",
+      "cat": "social",
+      "uri_check": "https://www.wattpad.com/api/v3/users/{account}",
+      "uri_pretty": "https://www.wattpad.com/user/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "waytohey",
+      "cat": "social",
+      "uri_check": "https://waytohey.com/{account}",
+      "e_code": 200,
+      "e_string": "Send message</span>",
+      "mode": "marker"
+    },
+    {
+      "name": "Weasyl",
+      "cat": "images",
+      "uri_check": "https://www.weasyl.com/~{account}",
+      "e_code": 200,
+      "e_string": "profile — Weasyl</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Weblancer",
+      "cat": "social",
+      "uri_check": "https://www.weblancer.net/users/{account}/",
+      "e_code": 200,
+      "e_string": "\"user\":",
+      "mode": "marker"
+    },
+    {
+      "name": "Weblate",
+      "cat": "hobby",
+      "uri_check": "https://hosted.weblate.org/user/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"user-page text-center\"",
+      "mode": "marker"
+    },
+    {
+      "name": "weebly",
+      "cat": "misc",
+      "uri_check": "https://{account}.weebly.com/",
+      "e_code": 200,
+      "e_string": "<div id=\"navigation\">",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "wego",
+      "cat": "political",
+      "uri_check": "https://wego.social/{account}",
+      "e_code": 200,
+      "e_string": "Following</span>",
+      "mode": "marker"
+    },
+    {
+      "name": "weheartit",
+      "cat": "social",
+      "uri_check": "https://weheartit.com/{account}",
+      "e_code": 200,
+      "e_string": " on We Heart It</title>",
+      "mode": "marker"
+    },
+    {
+      "name": "Weibo",
+      "cat": "social",
+      "uri_check": "https://weibo.com/ajax/profile/info?custom={account}",
+      "uri_pretty": "https://weibo.com/{account}",
+      "e_code": 200,
+      "e_string": "\"user\":",
+      "mode": "marker"
+    },
+    {
+      "name": "WeTransfer",
+      "cat": "art",
+      "uri_check": "https://wepresent.wetransfer.com/artists/{account}",
+      "e_code": 200,
+      "e_string": "name\":\"WePresent | ",
+      "mode": "marker"
+    },
+    {
+      "name": "Wikidot",
+      "cat": "social",
+      "uri_check": "https://www.wikidot.com/user:info/{account}",
+      "e_code": 200,
+      "e_string": "<h1 class=\"profile-title\">",
+      "mode": "marker"
+    },
+    {
+      "name": "Wikimapia",
+      "cat": "social",
+      "mode": "unavailable"
+    },
+    {
+      "name": "Wimkin-PublicProfile",
+      "cat": "political",
+      "uri_check": "https://wimkin.com/{account}",
+      "e_code": 200,
+      "e_string": "is on WIMKIN",
+      "mode": "marker"
+    },
+    {
+      "name": "Wireclub",
+      "cat": "social",
+      "uri_check": "https://www.wireclub.com/users/{account}",
+      "e_code": 200,
+      "e_string": "Chat With",
+      "mode": "marker"
+    },
+    {
+      "name": "Wishlistr",
+      "cat": "shopping",
+      "mode": "profile",
+      "uri_check": "https://www.wishlistr.com/{account}/"
+    },
+    {
+      "name": "wordnik",
+      "cat": "gaming",
+      "uri_check": "https://www.wordnik.com/users/{account}",
+      "e_code": 200,
+      "e_string": "Welcome,",
+      "mode": "marker"
+    },
+    {
+      "name": "WordPress.com (Deleted)",
+      "cat": "blog",
+      "uri_check": "https://public-api.wordpress.com/rest/v1.1/sites/{account}.wordpress.com",
+      "uri_pretty": "https://{account}.wordpress.com",
+      "e_code": 403,
+      "e_string": "\"message\":\"API calls to this endpoint have been disabled.\"",
+      "mode": "marker"
+    },
+    {
+      "name": "WordPress.com (Private)",
+      "cat": "blog",
+      "uri_check": "https://public-api.wordpress.com/rest/v1.1/sites/{account}.wordpress.com",
+      "uri_pretty": "https://{account}.wordpress.com",
+      "e_code": 403,
+      "e_string": "\"message\":\"User cannot access this private blog.\"",
+      "mode": "marker"
+    },
+    {
+      "name": "WordPress.com (Public)",
+      "cat": "blog",
+      "uri_check": "https://public-api.wordpress.com/rest/v1.1/sites/{account}.wordpress.com",
+      "uri_pretty": "https://{account}.wordpress.com",
+      "e_code": 200,
+      "e_string": "\"ID\":",
+      "mode": "marker"
+    },
+    {
+      "name": "WordPress.org (Forums)",
+      "cat": "blog",
+      "mode": "profile",
+      "uri_check": "https://wordpress.org/support/users/{account}/"
+    },
+    {
+      "name": "WordPress.org (Profiles)",
+      "cat": "blog",
+      "mode": "profile",
+      "uri_check": "https://profiles.wordpress.org/{account}/"
+    },
+    {
+      "name": "Wowhead",
+      "cat": "gaming",
+      "uri_check": "https://www.wowhead.com/user={account}",
+      "e_code": 200,
+      "e_string": " Profile - Wowhead",
+      "mode": "marker"
+    },
+    {
+      "name": "Wykop",
+      "cat": "social",
+      "uri_check": "https://wykop.pl/ludzie/{account}",
+      "e_code": 200,
+      "e_string": "<title>Profil:",
+      "mode": "marker"
+    },
+    {
+      "name": "X",
+      "cat": "social",
+      "mode": "profile",
+      "uri_check": "https://x.com/{account}"
+    },
+    {
+      "name": "Xakep.ru",
+      "cat": "tech",
+      "uri_check": "https://xakep.ru/author/{account}/",
+      "e_code": 200,
+      "e_string": "authorBlock-avatar",
+      "mode": "marker"
+    },
+    {
+      "name": "Xanga",
+      "cat": "blog",
+      "uri_check": "https://{account}.xanga.com/",
+      "e_code": 200,
+      "e_string": "class=\"module module-weblog\"",
+      "mode": "marker",
+      "strip_bad_char": "."
+    },
+    {
+      "name": "Xbox Gamertag",
+      "cat": "gaming",
+      "uri_check": "https://www.xboxgamertag.com/search/{account}",
+      "e_code": 200,
+      "e_string": "Games Played",
+      "mode": "marker"
+    },
+    {
+      "name": "xHamster",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://xhamster.com/users/{account}",
+      "e_code": 200,
+      "e_string": "and bio on xHamster",
+      "mode": "marker"
+    },
+    {
+      "name": "Xing",
+      "cat": "social",
+      "uri_check": "https://www.xing.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "<meta data-rh=",
+      "mode": "marker"
+    },
+    {
+      "name": "XNXX",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.xnxx.com/mobile/profile/{account}",
+      "e_code": 200,
+      "e_string": "<table id=\"profile\">",
+      "mode": "marker"
+    },
+    {
+      "name": "XVideos",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://www.xvideos.com/profiles/{account}/feed/",
+      "uri_pretty": "https://www.xvideos.com/profiles/{account}",
+      "e_code": 200,
+      "e_string": "\"result\":true",
+      "mode": "marker"
+    },
+    {
+      "name": "Yahoo! JAPAN Auction",
+      "cat": "shopping",
+      "uri_check": "https://auctions.yahoo.co.jp/follow/list/{account}",
+      "e_code": 200,
+      "e_string": "出品者",
+      "mode": "marker"
+    },
+    {
+      "name": "yapishu",
+      "cat": "hobby",
+      "uri_check": "https://yapishu.net/user/{account}",
+      "e_code": 200,
+      "e_string": "for_profile",
+      "mode": "marker"
+    },
+    {
+      "name": "Yazawaj",
+      "cat": "dating",
+      "uri_check": "https://www.yazawaj.com/profile/{account}",
+      "e_code": 200,
+      "e_string": "profile-description",
+      "mode": "marker"
+    },
+    {
+      "name": "YesWeHack",
+      "cat": "tech",
+      "uri_check": "https://api.yeswehack.com/hunters/{account}",
+      "uri_pretty": "https://yeswehack.com/hunters/{account}",
+      "e_code": 200,
+      "e_string": "\"username\":",
+      "mode": "marker"
+    },
+    {
+      "name": "YouNow",
+      "cat": "social",
+      "uri_check": "https://api.younow.com/php/api/broadcast/info/user={account}",
+      "uri_pretty": "https://www.younow.com/{account}",
+      "e_code": 200,
+      "e_string": "\"userId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "youpic",
+      "cat": "hobby",
+      "uri_check": "https://youpic.com/photographer/{account}",
+      "e_code": 200,
+      "e_string": "<meta name=\"og:title\"",
+      "mode": "marker"
+    },
+    {
+      "name": "YouTube Channel",
+      "cat": "video",
+      "uri_check": "https://www.youtube.com/c/{account}/about",
+      "e_code": 200,
+      "e_string": "joinedDateText",
+      "mode": "marker"
+    },
+    {
+      "name": "YouTube User",
+      "cat": "video",
+      "uri_check": "https://www.youtube.com/user/{account}/about",
+      "e_code": 200,
+      "e_string": "joinedDateText",
+      "mode": "marker"
+    },
+    {
+      "name": "YouTube User2",
+      "cat": "video",
+      "uri_check": "https://www.youtube.com/@{account}",
+      "e_code": 200,
+      "e_string": "canonicalBaseUrl",
+      "mode": "marker"
+    },
+    {
+      "name": "Zbiornik",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://mini.zbiornik.com/{account}",
+      "e_code": 200,
+      "e_string": "INFO",
+      "mode": "marker"
+    },
+    {
+      "name": "Zenn",
+      "cat": "coding",
+      "uri_check": "https://zenn.dev/{account}",
+      "e_code": 200,
+      "e_string": "<div class=\"UserHeader_profileMain__6Itxi\">",
+      "mode": "marker"
+    },
+    {
+      "name": "Zepeto",
+      "cat": "social",
+      "uri_check": "https://gw-napi.zepeto.io/profiles/{account}",
+      "uri_pretty": "https://web.zepeto.me/share/user/profile/{account}?language=en",
+      "e_code": 200,
+      "e_string": "zepetoId\":",
+      "mode": "marker"
+    },
+    {
+      "name": "zhihu",
+      "cat": "social",
+      "uri_check": "https://api.zhihu.com/books/people/{account}/publications?offset=0&limit=5",
+      "uri_pretty": "https://www.zhihu.com/people/{account}",
+      "e_code": 200,
+      "e_string": "\"is_start\": true",
+      "mode": "marker"
+    },
+    {
+      "name": "Zillow",
+      "cat": "shopping",
+      "uri_check": "https://www.zillow.com/profile/{account}/",
+      "e_code": 200,
+      "e_string": "- Real Estate Agent",
+      "mode": "marker"
+    },
+    {
+      "name": "zmarsa.com",
+      "cat": "xx NSFW xx",
+      "uri_check": "https://zmarsa.com/uzytkownik/{account}",
+      "e_code": 200,
+      "e_string": "Statystyki",
+      "mode": "marker"
+    },
+    {
+      "name": "Znanija",
+      "cat": "misc",
+      "mode": "unavailable"
+    },
+    {
+      "name": "Zomato",
+      "cat": "social",
+      "uri_check": "https://www.zomato.com/{account}/reviews",
+      "e_code": 200,
+      "e_string": "Activity</h4>",
+      "mode": "marker"
+    },
+    {
+      "name": "zoomitir",
+      "cat": "tech",
+      "uri_check": "https://www.zoomit.ir/user/{account}/",
+      "e_code": 301,
+      "e_string": "",
+      "mode": "marker"
+    },
+    {
+      "name": "Военное обозрение",
+      "cat": "hobby",
+      "uri_check": "https://topwar.ru/user/{account}/",
+      "e_code": 200,
+      "e_string": "class=\"puser-info\"",
+      "mode": "marker"
+    },
+    {
+      "name": "Чатовка.net",
+      "cat": "social",
+      "uri_check": "https://chatovka.net/search?user_nick=+{account}&user_sex_m=on&user_sex_f=on",
+      "e_code": 200,
+      "e_string": "href=\"/user/",
+      "mode": "marker"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+build/
+__pycache__/
+# investigation output: cases, reports and exports hold data about real people
+*.case.json
+mark47_report_*.md
+mark47_*.json
+mark47_*.csv

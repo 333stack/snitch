@@ -1,0 +1,78 @@
+{
+  "_doc": "Dork templates per target type. {placeholders}: all types {target}; phone {e164} {intl} {national} {dashed} {nat_digits}; email {local} {domain}. links are opened in your browser, never fetched (people-search sites block bots). region limits a link to phone numbers from that country.",
+  "phone": [
+    {"label": "exact (dashed)", "q": "\"{dashed}\""},
+    {"label": "exact (national)", "q": "\"{national}\""},
+    {"label": "exact (intl)", "q": "\"{intl}\""},
+    {"label": "exact (digits)", "q": "\"{nat_digits}\""},
+    {"label": "people search", "q": "\"{dashed}\" (site:truepeoplesearch.com OR site:fastpeoplesearch.com OR site:usphonebook.com OR site:thatsthem.com OR site:whitepages.com)"},
+    {"label": "people search 2", "q": "\"{dashed}\" (site:radaris.com OR site:nuwber.com OR site:spokeo.com OR site:cyberbackgroundchecks.com OR site:peoplesearchnow.com)"},
+    {"label": "caller reports", "q": "\"{dashed}\" (site:800notes.com OR site:whocalledme.com OR site:callersmart.com OR site:shouldianswer.com)"},
+    {"label": "social", "q": "\"{dashed}\" (site:facebook.com OR site:instagram.com OR site:linkedin.com OR site:x.com OR site:twitter.com)"},
+    {"label": "public social profiles", "q": "\"{e164}\" (site:facebook.com OR site:instagram.com OR site:linkedin.com OR site:x.com OR site:twitter.com)"},
+    {"label": "public video and community profiles", "q": "\"{intl}\" (site:tiktok.com OR site:youtube.com OR site:twitch.tv OR site:reddit.com OR site:threads.net OR site:threads.com)"},
+    {"label": "public developer and creator profiles", "q": "\"{e164}\" (site:github.com OR site:gitlab.com OR site:dev.to OR site:linktr.ee OR site:medium.com OR site:behance.net OR site:dribbble.com)"},
+    {"label": "public decentralized and media profiles", "q": "\"{intl}\" (site:bsky.app OR site:mastodon.social OR site:pinterest.com OR site:soundcloud.com)"},
+    {"label": "documents", "q": "\"{dashed}\" (filetype:pdf OR filetype:xls OR filetype:xlsx OR filetype:csv OR filetype:doc OR filetype:docx)"},
+    {"label": "pastes", "q": "\"{dashed}\" (site:pastebin.com OR site:justpaste.it OR site:rentry.co)"},
+    {"label": "listings", "q": "\"{dashed}\" (craigslist OR offerup OR \"for sale\" OR rent)"},
+    {"label": "resumes", "q": "\"{dashed}\" (resume OR CV OR \"contact\")"}
+  ],
+  "email": [
+    {"label": "exact", "q": "\"{target}\""},
+    {"label": "documents", "q": "\"{target}\" (filetype:pdf OR filetype:xls OR filetype:xlsx OR filetype:csv OR filetype:txt OR filetype:doc OR filetype:docx)"},
+    {"label": "pastes", "q": "\"{target}\" (site:pastebin.com OR site:justpaste.it OR site:rentry.co)"},
+    {"label": "code", "q": "\"{target}\" (site:github.com OR site:gitlab.com OR site:stackoverflow.com)"},
+    {"label": "social", "q": "\"{target}\" (site:linkedin.com OR site:facebook.com OR site:x.com OR site:twitter.com OR site:instagram.com)"},
+    {"label": "people search", "q": "\"{target}\" (site:thatsthem.com OR site:spokeo.com OR site:radaris.com OR site:nuwber.com)"},
+    {"label": "obfuscated", "q": "\"{local} at {domain}\" OR \"{local} [at] {domain}\""},
+    {"label": "resumes", "q": "\"{target}\" (resume OR CV OR phone OR address)"}
+  ],
+  "username": [
+    {"label": "exact", "q": "\"{target}\""},
+    {"label": "in url", "q": "inurl:{target}"},
+    {"label": "social", "q": "\"{target}\" (site:reddit.com OR site:x.com OR site:twitter.com OR site:instagram.com OR site:tiktok.com OR site:facebook.com OR site:youtube.com)"},
+    {"label": "SoundCloud profiles", "q": "\"{target}\" site:soundcloud.com"},
+    {"label": "Spotify profiles", "q": "\"{target}\" (site:open.spotify.com/user OR site:open.spotify.com/artist)"},
+    {"label": "Spotify tracks", "q": "\"{target}\" site:open.spotify.com/track"},
+    {"label": "code", "q": "\"{target}\" (site:github.com OR site:gitlab.com OR site:stackoverflow.com OR site:dev.to)"},
+    {"label": "pastes", "q": "\"{target}\" (site:pastebin.com OR site:justpaste.it OR site:rentry.co)"},
+    {"label": "forums", "q": "\"{target}\" (forum OR member OR profile OR posts)"},
+    {"label": "emails", "q": "\"{target}\" (\"@gmail.com\" OR \"@yahoo.com\" OR \"@hotmail.com\" OR \"@outlook.com\" OR \"@proton.me\")"}
+  ],
+  "ip": [
+    {"label": "exact", "q": "\"{target}\""},
+    {"label": "pastes", "q": "\"{target}\" (site:pastebin.com OR site:justpaste.it OR site:rentry.co)"},
+    {"label": "logs/configs", "q": "\"{target}\" (filetype:log OR filetype:txt OR filetype:conf OR filetype:cfg)"},
+    {"label": "abuse", "q": "\"{target}\" (abuse OR attack OR spam OR botnet OR malware OR scanner)"},
+    {"label": "threat intel", "q": "\"{target}\" (site:abuseipdb.com OR site:virustotal.com OR site:talosintelligence.com OR site:otx.alienvault.com)"}
+  ],
+  "links": {
+    "phone": [
+      {"label": "TruePeopleSearch", "region": "US", "url": "https://www.truepeoplesearch.com/resultphone?phoneno={dashed}"},
+      {"label": "FastPeopleSearch", "region": "US", "url": "https://www.fastpeoplesearch.com/{dashed}"},
+      {"label": "USPhoneBook", "region": "US", "url": "https://www.usphonebook.com/{dashed}"},
+      {"label": "ThatsThem", "region": "US", "url": "https://thatsthem.com/phone/{dashed}"},
+      {"label": "Whitepages", "region": "US", "url": "https://www.whitepages.com/phone/1-{dashed}"},
+      {"label": "800notes", "region": "US", "url": "https://800notes.com/Phone.aspx/1-{dashed}"},
+      {"label": "Sync.ME", "url": "https://sync.me/search/?number={digits}"},
+      {"label": "WhatsApp chat", "url": "https://wa.me/{digits}"},
+      {"label": "Telegram", "url": "https://t.me/+{digits}"}
+    ],
+    "email": [
+      {"label": "ThatsThem", "url": "https://thatsthem.com/email/{target_url}"},
+      {"label": "Have I Been Pwned (web)", "url": "https://haveibeenpwned.com/account/{target_url}"},
+      {"label": "Epieos", "url": "https://epieos.com/?q={target_url}"}
+    ],
+    "username": [
+      {"label": "Instant Username", "url": "https://instantusername.com/#/?q={target_url}"}
+    ],
+    "ip": [
+      {"label": "AbuseIPDB", "url": "https://www.abuseipdb.com/check/{target}"},
+      {"label": "VirusTotal", "url": "https://www.virustotal.com/gui/ip-address/{target}"},
+      {"label": "Shodan", "url": "https://www.shodan.io/host/{target}"},
+      {"label": "Censys", "url": "https://search.censys.io/hosts/{target}"},
+      {"label": "GreyNoise", "url": "https://viz.greynoise.io/ip/{target}"}
+    ]
+  }
+}
