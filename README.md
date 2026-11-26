@@ -16,6 +16,11 @@ cmake -S . -B build && cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
+Install for your user so `snitch` runs from any terminal (binary in `~/.local/bin`, data in `~/.local/share/snitch`); re-run after rebuilding to update:
+```sh
+cmake --install build --prefix ~/.local
+```
+
 Use it only on targets you're authorised to research, and respect each site's terms.
 
 ## License

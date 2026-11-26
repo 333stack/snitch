@@ -5,3 +5,6 @@ __pycache__/
 mark47_report_*.md
 mark47_*.json
 mark47_*.csv
+# local-only data: proxy list may hold credentials; carrier data is downloaded by tools/import_carrier_data.py
+data/search-proxies.txt
+data/carrier-prefixes.txt

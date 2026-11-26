@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <cstring>
+#include <filesystem>
 #include <fstream>
 #include <sstream>
 #include <stdexcept>
@@ -105,7 +106,12 @@ const char* type_name(Type t) {
 
 std::string data_path(const std::string& file) {
     const char* env = std::getenv("MARK47_DATA");
-    return std::string(env && *env ? env : MARK47_DATA_DIR) + "/" + file;
+    if (env && *env) return std::string(env) + "/" + file;
+    // Installed copy: <prefix>/bin/snitch reads <prefix>/share/snitch. A build-tree run falls through to the source data.
+    std::error_code ec;
+    const auto installed = std::filesystem::read_symlink("/proc/self/exe", ec).parent_path().parent_path() / "share/snitch" / file;
+    if (!ec && std::filesystem::exists(installed, ec)) return installed.string();
+    return std::string(MARK47_DATA_DIR) + "/" + file;
 }
 
 std::string read_file(const std::string& path) {

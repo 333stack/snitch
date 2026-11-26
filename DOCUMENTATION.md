@@ -283,7 +283,7 @@ A link with `"region"` is only shown for phone numbers from that country. Overri
 |---|---|
 | Settings (SearXNG URL, region, all engines, disabled modules) | `~/.config/mark47/settings.json` (`$XDG_CONFIG_HOME` respected); loaded at start, saved on exit |
 | Optional credentials (Discord user token) | `~/.config/mark47/keys.json`, mode 0600, written atomically on **Save token**. **Remove token** deletes the file |
-| Dork templates + lookup links | `data/dorks.json` (source tree; `MARK47_DATA` overrides) |
+| Dork templates + lookup links | `data/dorks.json` (source tree, or `~/.local/share/snitch` when installed; `MARK47_DATA` overrides) |
 | Export | `./mark47_<timestamp>_<sequence>.json`, schema v2. See fields below. |
 
 Schema v2 keeps the legacy `target`, `findings` and `log` fields. `target` is the last launched target. `runs` lists IDs, normalized targets, types, parent run IDs, outcomes and error counts. Findings keep their original fields and add `run_id` and `pivot`. Export during a run captures a point-in-time snapshot and can include outcome `running`.
@@ -569,3 +569,8 @@ The click happens at frame 5. A tiling WM may resize the window after start, so 
 ### 2026-11-25 · Renamed to snitch
 
 - The program is now just `snitch`: window title, GUI build target and executable (`./build/snitch`), and the User-Agent (`snitch/1.0 (public profile lookup)`, `snitch/1.0 (local music metadata lookup)`). Internal names are unchanged: the `mark47_core` library, settings in `~/.config/mark47/settings.json`, and the `mark47_` export filename prefix.
+
+### 2026-11-25 · Install from the terminal
+
+- `cmake --install build --prefix ~/.local` installs `~/.local/bin/snitch` and copies `data/` to `~/.local/share/snitch`, so `snitch` runs from any directory.
+- `data_path()` order: `MARK47_DATA`, then `<exe>/../share/snitch` when the file exists there, then the source `data/` compiled in. `username-sites.json` now goes through `data_path()` too, so `MARK47_DATA` covers it. Checked with a probe linked against `mark47_core`: build-tree runs read the source `data/`, the `~/.local` install reads `~/.local/share/snitch`.

@@ -215,7 +215,7 @@ void social_profiles(const Job& j) {
 
 const nlohmann::json& bundled_username_catalog() {
     static const auto catalog = nlohmann::json::parse(
-        read_file((std::filesystem::path(MARK47_DATA_DIR) / "username-sites.json").string()));
+        read_file(data_path("username-sites.json")));
     return catalog;
 }
 
